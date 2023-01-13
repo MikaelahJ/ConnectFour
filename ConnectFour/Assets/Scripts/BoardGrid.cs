@@ -15,7 +15,6 @@ public class BoardGrid : MonoBehaviour
             {
                 cells.Add(cell.gameObject, i);
                 i++;
-                //Debug.Log(cells[cell.gameObject]);
             }
         }
     }
@@ -23,13 +22,12 @@ public class BoardGrid : MonoBehaviour
     public void SetCellTaken(GameObject cell, GameObject plupp)
     {
         bool color = false;
-        if (plupp.CompareTag("Green")) //if color green = true, purple = false
+        if (plupp.CompareTag("Green")) 
         {
             color = true;
         }
-        Debug.Log("cell " + cells[cell]);
-        Debug.Log("plupp " + plupp.tag);
+        //if color green = true, purple = false
         GameManager.Instance.takenCell.Add(cells[cell], color);
-        GameManager.Instance.CheckWin();
+        GameManager.Instance.StartCheckWin(cells[cell]);
     }
 }

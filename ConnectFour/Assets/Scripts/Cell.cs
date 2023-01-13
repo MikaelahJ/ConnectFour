@@ -6,11 +6,19 @@ public class Cell : MonoBehaviour
 {
     private float timer;
     private int timeToBeStill = 2;
+    private bool isInTrigger;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        timer += Time.deltaTime;
-        if (collision.gameObject.GetComponent<Rigidbody2D>() != null && timer >= timeToBeStill)
+        isInTrigger = true;
+        StartCoroutine(AddPlupp(collision));
+    }
+
+    private IEnumerator AddPlupp(Collider2D collision)
+    {
+        yield return new WaitForSeconds(2);
+
+        if (collision.gameObject.GetComponent<Rigidbody2D>() != null && isInTrigger)
         {
             BoardGrid gridScript = transform.parent.parent.GetComponent<BoardGrid>();
             gridScript.SetCellTaken(gameObject, collision.gameObject);
@@ -18,8 +26,9 @@ public class Cell : MonoBehaviour
             collision.GetComponent<Plupp>().DeactivateRb();
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        timer = 0;
+        isInTrigger = false;
     }
 }
