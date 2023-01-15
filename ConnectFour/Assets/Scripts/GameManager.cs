@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
     {
         gridBox = GameObject.Find("GridBox");
 
-        if (greenTurn)
-            RotateBoxLeft();
-        else if (!greenTurn)
-            RotateBoxRight();
+        //if (greenTurn)
+        //    RotateBoxLeft();
+        //else if (!greenTurn)
+        //    RotateBoxRight();
     }
 
     private void RotateBoxLeft()

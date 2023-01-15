@@ -1,0 +1,4261 @@
+fileFormatVersion: 2
+guid: a57094461e1107741a4e1bfe74d3326a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 12.5
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 423
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc34b09c423fc4141bbdce637818ad8e
+      internalID: 322615493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 400
+        width: 43
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27a127fb5036094db2adab29f0ba82b
+      internalID: 1645350290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_5
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 384
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996525be699ea91409082cd5ca211d26
+      internalID: -1879073449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b1dad7a00738641bfecec37105aba9
+      internalID: -1321245042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 352
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975bb86698f861a4190fcbe56db729ee
+      internalID: 1560768671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 352
+        width: 40
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f47211a0012694bb57e34ad62bf18a
+      internalID: 2006463529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_9
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 352
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf2f9877f37f034684d9b67fdc1fd3a
+      internalID: 648210617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 336
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aba463bd16d0744996df7a1f6cd7d48
+      internalID: -629838624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_13
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 320
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1bdd676f21f5b4693fd74219af4b0e
+      internalID: -680405600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 320
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdb2715467ea46438e7eb0ab11008e7
+      internalID: -1395197072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_15
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 328
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13349a3cf84b9c24d8fe18b4cd314372
+      internalID: 342251719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 304
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40effcbb88fa2148bb00be1e3e5e44b
+      internalID: 142977673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_17
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 80
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ab85ad976df524780bfa1f87940a4d
+      internalID: -1921547410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_18
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 304
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40075bf72d02c124db9490c052050df1
+      internalID: 185416786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_19
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 304
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e36b8d1f4a6164693ef6dbcdb0152c
+      internalID: -174384408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_20
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 288
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee57db916d79aa4abec81fdc4d8a867
+      internalID: -737991637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_21
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 288
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22eb4070b80e1a3459cb5903df51f32f
+      internalID: -547636299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_22
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 272
+        width: 5
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb08bde9af23374fb135f5f00037142
+      internalID: 127340423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_23
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 273
+        width: 5
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9baa2f47dd22014faacfd923626cdac
+      internalID: 93868284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 273
+        width: 5
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33294da0fb260724b95599c6796aec86
+      internalID: -2006827552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_25
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 273
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7738495f5efe4742922e9e54bfec5c6
+      internalID: -1864628994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_26
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 291
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc716e652fda4024b9026c9caf35a35e
+      internalID: 2078849166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_27
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 291
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa351891eeb3fb4cba49b7cf7e9343c
+      internalID: -1068698109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_28
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 291
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b47bbe84a5b10049acc044365b1ed5c
+      internalID: -1193821886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_29
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 291
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d57c47e90f64be498d5fae56f978765
+      internalID: 2141309354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_30
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 288
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd83cbe954e9d247a7df2c0c627b578
+      internalID: 2001807811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_31
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 272
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aedc43e31ed4dc34b89ff3b432bca105
+      internalID: 313217055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_32
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 272
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fd2724434b93e45bc01c0ff0d7770a
+      internalID: 772290450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_33
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 272
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0604b3d3cb1edac4f977a5a72b95dffd
+      internalID: -1190908251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_34
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 274
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34a9c37f7b9d5246b74d69bba070827
+      internalID: 324477766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_35
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 274
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bd35111270f1442b3dce540fd51d98
+      internalID: 129098226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_36
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 256
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c80b9b64c6327448f744fdcec4a59f
+      internalID: -807948864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_37
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 256
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2affe89f5eaff478d2e7f29ad6bd90
+      internalID: -1397203323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_38
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 256
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8767d25639a927e4d8cefbec9b2116b0
+      internalID: -1881092445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_39
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 256
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b8c78c33382ca4c849fb05cb68f46e
+      internalID: -866532447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_40
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 257
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8a07ba2d9085341a2f28d7f4a58105
+      internalID: -131093037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_41
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 257
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f165f524f13fbe41946c668b9512b64
+      internalID: 343792080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_42
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 257
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f528a4aefb6ffc74d9e928ece429c2d6
+      internalID: -844787165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_43
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 257
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e9cdb9748406045947dd41618f0e6d
+      internalID: -1405834952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_44
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 256
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db30844b44089bd408f1c2913f98c24e
+      internalID: 910031894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_45
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 240
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4815b1e65feb1cd4786a497ae3e8e5c6
+      internalID: -407713284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_46
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 240
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ca23d864caa2642811619394b507bf
+      internalID: 1439963169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_47
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 240
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec54e2673cf717447a8591df6f29f70d
+      internalID: 2134608872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_48
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 240
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262f9210cbb5de440b44ce46c22ad770
+      internalID: -1767796726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_49
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 242
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be604737e31b810489ad736a7e8e6eb7
+      internalID: 423333158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_50
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 242
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db7022ba2509e54382a608818804013
+      internalID: -1288211312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7eee1df17f60484d89ba275d36c90f7
+      internalID: -1369705261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_52
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 224
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f16a5ea03ed6348b2a93174af97fab
+      internalID: 1331767514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_53
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 224
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889595f29aab00e499da44cde3e4b7cb
+      internalID: -666301318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_54
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 224
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b95b61d45389141bdeae47d088ae6f
+      internalID: -676599851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_55
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 224
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d069efeabba27db4992a8b1317c0d73d
+      internalID: -1708106586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_56
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 225
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b34422a896a1141be2b091bdb7646b
+      internalID: 1861027930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_57
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 225
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869b7fdce46bbb64fa3f36e5d2cdbe56
+      internalID: 1503691456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_58
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78aa1d6d2c0d6249baf412233b25137
+      internalID: -993712636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_59
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 192
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a14fb55206c7d047a3bc0a701a0519b
+      internalID: -2145026327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_60
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 208
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3ffb5a70a43b849b3e4759d28d3b5e
+      internalID: 483978090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_61
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 208
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a64f5b2ba5cb4844abf9052a3e7c1bb
+      internalID: -1090003109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_62
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 208
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869e4a941ab92eb4fad4c3e8e12f8002
+      internalID: -1279736660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_63
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 208
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3487bfb948db4ae4fade514d292da602
+      internalID: -836331878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_64
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 208
+        width: 5
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50be12479d50a2b4a80f0e2bc76a0ffd
+      internalID: 639604342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_65
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 208
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ccb6127814c6545bace4a175ce2938
+      internalID: 1324218961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_66
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 208
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6731fdf0f83030740bc4affd17d046d9
+      internalID: -874642728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_67
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 192
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930ca3aabcc84bb468ec2e1bf8cad705
+      internalID: 1943167903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_68
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 192
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060fd4a631eeedb4f8e7bbdbf228b0e9
+      internalID: -1299734953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_69
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 192
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de3a855be5b3dd46befb32abcacd744
+      internalID: -1054586817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_70
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 176
+        width: 7
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2c30fbe5394464bb1845c1a3d03706
+      internalID: -434868307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_71
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03160f83253ee0d4ab11ba2120eba4f5
+      internalID: 1080388354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_72
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd609844349a76d43845a9454cc553e2
+      internalID: 1994309433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_73
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd8664ced9a0c04e9ac18c70a9c34e5
+      internalID: 1311805775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_74
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 176
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434acfeca53ffb94488020fa71ed0746
+      internalID: -410042899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_75
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 176
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d63a17bdd7d0240b2c99ea180adf84
+      internalID: 871304543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_76
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 176
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4007ddb7d81324e91007e3d24a3d39
+      internalID: 1821673785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_77
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 176
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44959a92fd9a6a4c9c083fd986e6a12
+      internalID: 303234798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_78
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6cbc01419716a418066ca029d86684
+      internalID: -1859913458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_79
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 144
+        width: 3
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfe7e55f57876848abd004ec72b0706
+      internalID: -1810371545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_80
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7180f44c04a64b44bbdbe12b527701fb
+      internalID: 886680545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_81
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 176
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8865fa1263e70734eb94cc2ef573cb90
+      internalID: -975213369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_82
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 176
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f298cbc05e4574b905d0862066b784
+      internalID: 353093811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_83
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 176
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900894dfaf7340f46b15803f840b20a8
+      internalID: -1649556551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_84
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 160
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f986649bda56384585993690b1377fd
+      internalID: 69776548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_85
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d971f09eb7e2241ad4633fc7ee7cbc
+      internalID: 932710491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_86
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 160
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861493d48213978449b8ee6a7709b188
+      internalID: 1904721811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_87
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26832d690b58de841b67738af467dfe1
+      internalID: -1112008168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_88
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 169
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4873b039e3dd5489d4766d87f57502
+      internalID: -2095916045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_89
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 4
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0cf8594cefdd2847a93d0efe7f0cf90
+      internalID: 1662117514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_90
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 172
+        width: 14
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d37c43500cdf1c4ba02378721f7ff1e
+      internalID: 984365613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_91
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 160
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a128331bad1a3d048bfca4c7dd6a3dbc
+      internalID: -84165427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_92
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 160
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7078bbe35b83de94baef7f1b1d21de09
+      internalID: 27149640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_93
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 160
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd0e08fe2b3475449673b8567621c77
+      internalID: 943493681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_94
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 32
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9a94813a2f7d640865880ed717b243
+      internalID: 1272066301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_95
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 144
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70be501e30b97954eb0a05d6f8c2ed60
+      internalID: 527472641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_96
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 144
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb6ec100dc75444699b203be03d86ba
+      internalID: 23767730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_97
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 144
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d00164d36cb6947bf144c044a12ad8
+      internalID: 1944888358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_98
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 144
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c3cfd24b8cdf24eaf8de5544cdba2a
+      internalID: -981536956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_99
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 144
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e880f2f3bef509249ac0992b8ace7ed1
+      internalID: 388338040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_100
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 152
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21158defc5ac4d4f86297bb05894609
+      internalID: 975197299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_101
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 152
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1941ba76496764aa99b6f4720aa5bd
+      internalID: -1810879180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_102
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 151
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b761969cd1826c14db5bdb5236de3a46
+      internalID: 1280269880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_103
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc684c097f9f7e84397df1f95670559c
+      internalID: 1489463785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_104
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 144
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9b6485165daee4b9c4f7de3f0341cf
+      internalID: -971142196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_105
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07c619461257e44ab62592775ad58da
+      internalID: -1623070587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_106
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 128
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0682da618dc3c44870f91003136cbe
+      internalID: -1496842767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_107
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 128
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82719a76b6ff46742bc7143334aabf77
+      internalID: 1980074866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_108
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 128
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc808d1d9cc472247b2329ed4db7e74b
+      internalID: -44945167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_109
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 208
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 431ca0cf5c46e4d4283d7d3b9b9fecf7
+      internalID: 1151746842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_110
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 128
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a55adf2c05c63644a1ab0025af0a572
+      internalID: -1300955796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_111
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369c6ba23ea0aac4bb6dbafaf4a1d849
+      internalID: 1818725932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_112
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 224
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecf590ff15915184797e471206b3e52f
+      internalID: 407802524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_113
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 112
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d495e1d3c909442b3d1616640ef699
+      internalID: -154785575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_114
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 112
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bf66b7971a88b459a6c2fd8512f5e6
+      internalID: 1226089576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_115
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 112
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142e953b016d53746ad69095ce9d4034
+      internalID: -817512705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_116
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 96
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb277b3ca563a2e43bd191755aff1378
+      internalID: 1704938412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_117
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 384
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e0844a11057fd409a9fbb84d47235a
+      internalID: 1867649684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_119
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcff8552b3b6cd146868c69472594081
+      internalID: 2052292957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f8deeeed1f3d44d847ce5e3c3a85f8
+      internalID: 98423398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_123
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777d8370c87eaa34694162d3e76cb061
+      internalID: 1669308183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_124
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 25
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ab8f68f1e6660438eda4906324780c
+      internalID: 216901279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_125
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 96
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2879de66c0ac54583a705b6d9476c1
+      internalID: 729509171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_126
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 96
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b3efc25582c0b45ad5d68d8428f94c
+      internalID: -1921220066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_127
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 96
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a90b9e79997a2d48b726342881c7199
+      internalID: -2052226084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_128
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 30
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ec3944cb66ca648b1c8daf48364a75
+      internalID: 1115896433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_129
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 80
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777f267187e59cf4f8f6993c4ef688ae
+      internalID: 591847836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_130
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 41
+        width: 7
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe9d55e2ce4bc1499b328561e6fee56
+      internalID: 1156538484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_131
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9a43cf48440704584238e406dbed0c
+      internalID: -468791639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_132
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 96
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4c820ff53eb494b8354b139ae85f4d
+      internalID: -1508387384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_133
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb033aa98628ec4e84e5050cf875003
+      internalID: -1562138215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_134
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 368
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f7cd4431c59ed40a889a92d5d8bf75
+      internalID: -972918155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_135
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 0
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e1cc373b79e904e9a50475ea7953de
+      internalID: 1765008843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_136
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 48
+        width: 9
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12080cde6b155094cbf555a9bde9798f
+      internalID: 589107164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_137
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16915d73d85bdaf48937aba47f270c1b
+      internalID: -680925073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_138
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 80
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a196aa69fa0af7a4597e7197f535a422
+      internalID: 442333443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_139
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 80
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32bb4d21414a9846ad16f356c985783
+      internalID: 551462970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_140
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 64
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6436a4711a2e94e9eec86878e7ef9f
+      internalID: -1877532452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_141
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 64
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9521d67b1a5e36d41827808aed8ffe85
+      internalID: -1976719473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_142
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 16
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbbd1863c965ad4091fa98f67c76305
+      internalID: 626952509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_143
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 129
+        width: 16
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ca2069ad66eac468e68a484bbb7eab
+      internalID: -87631949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_144
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 48
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5299dbcd911590f498e30d06e5400001
+      internalID: 799646595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_145
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 24
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fa5ac0dac93a842994de3c0abc6172
+      internalID: -1062805895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_146
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 320
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4e57e25f46da5428c2d8143e95abd7
+      internalID: 232663042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_147
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 96
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6cf5b68afe9cc84093e25ed5ee3b93c
+      internalID: 840378228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_148
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 64
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bad43cc8bdf8684688a1babce686c20
+      internalID: -632199868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_149
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 16
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90e49f7438ea324eb5d34acfa82f045
+      internalID: -889529473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_150
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e84e36c5fe60c47be55a89c2fb028c
+      internalID: 835354954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_151
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 48
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0dfbd523a5deb4c9220940af8b6762
+      internalID: -970610777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_152
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 48
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f93fdb76a785c409cb7c66bdc46b78
+      internalID: -1057823894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_153
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583009436044e63489c09ebd4e393f1d
+      internalID: 615060931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_154
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 64
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9fa33e94a2ab341bba3e9c63ddec4f
+      internalID: 1133912796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 401
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef91302f4592d3e418ff095332624f8d
+      internalID: -813080148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_156
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 400
+        width: 48
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a8e1adab2bf2d4cad3c6e9c2b45d84
+      internalID: -1926530599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_157
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 384
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19add8afea1011547915a1e64e435847
+      internalID: 1821906212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_158
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 384
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6181dc55c12785d40993c88ad04a8c8d
+      internalID: 2094449679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_159
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 368
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b2d9b8cffeed343b95d336899c6091
+      internalID: 1781086698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 368
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0cc682eb6aedb46b78758b8a47956e
+      internalID: -197292714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 0
+        width: 9
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de42fe5ccab32d84fad06814880e61f0
+      internalID: -853865474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc9dbd8269369f469aea3facab13e8a
+      internalID: -589822531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20dd3b068537cea42902f3349004afe1
+      internalID: -74856703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_160
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 304
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5629cba03935c4aa80e12f3115b6f3
+      internalID: 1535334291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_161
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 304
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8499faba463ba4daa2d759449f38cc
+      internalID: 1046130449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_162
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 384
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f031e5385687abe4eafba71122cb08b5
+      internalID: -484212126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_163
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 384
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e959c90e7ff197c43b4f43239e8ced28
+      internalID: 245252959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_164
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 368
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e16d8f32083b244082b3c2e54286d3c
+      internalID: -872272638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_165
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 352
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c71e34d5296834c8b3a3ba86068483
+      internalID: 974769239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_166
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 304
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca2de4f1e9e0e241af5e8c4123fd55c
+      internalID: 1761364696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_167
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdfa16ed0a19d843b6c31aca2638366
+      internalID: -1018166649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_168
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 208
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc975a13b739bc4b901d27b5faf21d3
+      internalID: 2044878643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_169
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 224
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a718ba87648193145a773e18c3591492
+      internalID: 1775571953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_170
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651c5776e2c2fb54a93fce679a7c1deb
+      internalID: 385869451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_171
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 368
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002b3c8294186f4438abc4e97f822628
+      internalID: 2036901065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_172
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 352
+        width: 40
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2555ad0ae934ce41b06d60e0808c4da
+      internalID: -1739545858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_173
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 336
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4117943ecf5f4fc478769ffabb48c8fb
+      internalID: -1925054808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_174
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 336
+        width: 40
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c305a2c71e6f5749a37395a0e1c327d
+      internalID: -976091744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_175
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 320
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a543a4a902e4f4a859f0aa00fea295
+      internalID: 1177885702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_176
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 417
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b81c45205b80c4b84197e19b85b915
+      internalID: -1908368870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_177
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 423
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ca1929712fbff45bb49ac46492f519
+      internalID: -2100194064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_178
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 417
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95943c06ee93b334f857156503a11a1c
+      internalID: -1504590768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_180
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 417
+        width: 3
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d1e4dac21e9f6409f095e4fb8a6fba
+      internalID: -1925000447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_118
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 352
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748daa155b885384b8be7108fa53013b
+      internalID: -159368603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_120
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 352
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc3fb1d6fd00b624a8b8eb6c880cf760
+      internalID: -773149894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_121
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 19
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4435ca74f09714e8430b56cf6187d6
+      internalID: 825378424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_155
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 170
+        width: 14
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bade269541c7347b1b581c98086888
+      internalID: 190844842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_179
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 64
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f963b328decbaf444af26ff0342f5351
+      internalID: -1071392223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_181
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 9
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c28da5c41893944fb6afe9c4bf63432
+      internalID: 1213207676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_182
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 9
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3518374c5de504db4ca8424bb1007f
+      internalID: 450012869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_183
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 9
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec23d0c21dde134ca99081d22c59c08
+      internalID: 1963823770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_184
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 102
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b8285d925dac546b4c12d7cbeae977
+      internalID: 1375172491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_185
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d73bd12923de88439b012b6ab4cf5f4
+      internalID: 1866971368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BGCastle_KB1_BaseColor_186
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586ad73a50b0b6647b16133a4f2b034a
+      internalID: 606064019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BGCastle_KB1_BaseColor_163: 245252959
+      BGCastle_KB1_BaseColor_83: -1649556551
+      BGCastle_KB1_BaseColor_92: 27149640
+      BGCastle_KB1_BaseColor_136: 589107164
+      BGCastle_KB1_BaseColor_12: -74856703
+      BGCastle_KB1_BaseColor_81: -975213369
+      BGCastle_KB1_BaseColor_21: -547636299
+      BGCastle_KB1_BaseColor_27: -1068698109
+      BGCastle_KB1_BaseColor_129: 591847836
+      BGCastle_KB1_BaseColor_153: 615060931
+      BGCastle_KB1_BaseColor_19: -174384408
+      BGCastle_KB1_BaseColor_37: -1397203323
+      BGCastle_KB1_BaseColor_137: -680925073
+      BGCastle_KB1_BaseColor_48: -1767796726
+      BGCastle_KB1_BaseColor_59: -2145026327
+      BGCastle_KB1_BaseColor_6: -1321245042
+      BGCastle_KB1_BaseColor_114: 1226089576
+      BGCastle_KB1_BaseColor_102: 1280269880
+      BGCastle_KB1_BaseColor_52: 1331767514
+      BGCastle_KB1_BaseColor_75: 871304543
+      BGCastle_KB1_BaseColor_132: -1508387384
+      BGCastle_KB1_BaseColor_112: 407802524
+      BGCastle_KB1_BaseColor_171: 2036901065
+      BGCastle_KB1_BaseColor_55: -1708106586
+      BGCastle_KB1_BaseColor_70: -434868307
+      BGCastle_KB1_BaseColor_72: 1994309433
+      BGCastle_KB1_BaseColor_121: 825378424
+      BGCastle_KB1_BaseColor_9: 648210617
+      BGCastle_KB1_BaseColor_169: 1775571953
+      BGCastle_KB1_BaseColor_46: 1439963169
+      BGCastle_KB1_BaseColor_69: -1054586817
+      BGCastle_KB1_BaseColor_94: 1272066301
+      BGCastle_KB1_BaseColor_68: -1299734953
+      BGCastle_KB1_BaseColor_181: 1213207676
+      BGCastle_KB1_BaseColor_96: 23767730
+      BGCastle_KB1_BaseColor_168: 2044878643
+      BGCastle_KB1_BaseColor_88: -2095916045
+      BGCastle_KB1_BaseColor_13: -680405600
+      BGCastle_KB1_BaseColor_106: -1496842767
+      BGCastle_KB1_BaseColor_166: 1761364696
+      BGCastle_KB1_BaseColor_11: -589822531
+      BGCastle_KB1_BaseColor_86: 1904721811
+      BGCastle_KB1_BaseColor_35: 129098226
+      BGCastle_KB1_BaseColor_104: -971142196
+      BGCastle_KB1_BaseColor_2: 322615493
+      BGCastle_KB1_BaseColor_32: 772290450
+      BGCastle_KB1_BaseColor_140: -1877532452
+      BGCastle_KB1_BaseColor_105: -1623070587
+      BGCastle_KB1_BaseColor_159: 1781086698
+      BGCastle_KB1_BaseColor_176: -1908368870
+      BGCastle_KB1_BaseColor_53: -666301318
+      BGCastle_KB1_BaseColor_156: -1926530599
+      BGCastle_KB1_BaseColor_79: -1810371545
+      BGCastle_KB1_BaseColor_172: -1739545858
+      BGCastle_KB1_BaseColor_122: 98423398
+      BGCastle_KB1_BaseColor_44: 910031894
+      BGCastle_KB1_BaseColor_109: 1151746842
+      BGCastle_KB1_BaseColor_154: 1133912796
+      BGCastle_KB1_BaseColor_157: 1821906212
+      BGCastle_KB1_BaseColor_174: -976091744
+      BGCastle_KB1_BaseColor_66: -874642728
+      BGCastle_KB1_BaseColor_147: 840378228
+      BGCastle_KB1_BaseColor_17: -1921547410
+      BGCastle_KB1_BaseColor_117: 1867649684
+      BGCastle_KB1_BaseColor_146: 232663042
+      BGCastle_KB1_BaseColor_76: 1821673785
+      BGCastle_KB1_BaseColor_155: 190844842
+      BGCastle_KB1_BaseColor_167: -1018166649
+      BGCastle_KB1_BaseColor_28: -1193821886
+      BGCastle_KB1_BaseColor_108: -44945167
+      BGCastle_KB1_BaseColor_93: 943493681
+      BGCastle_KB1_BaseColor_30: 2001807811
+      BGCastle_KB1_BaseColor_42: -844787165
+      BGCastle_KB1_BaseColor_43: -1405834952
+      BGCastle_KB1_BaseColor_62: -1279736660
+      BGCastle_KB1_BaseColor_40: -131093037
+      BGCastle_KB1_BaseColor_29: 2141309354
+      BGCastle_KB1_BaseColor_182: 450012869
+      BGCastle_KB1_BaseColor_14: -1395197072
+      BGCastle_KB1_BaseColor_107: 1980074866
+      BGCastle_KB1_BaseColor_119: 2052292957
+      BGCastle_KB1_BaseColor_31: 313217055
+      BGCastle_KB1_BaseColor_3: -853865474
+      BGCastle_KB1_BaseColor_23: 93868284
+      BGCastle_KB1_BaseColor_144: 799646595
+      BGCastle_KB1_BaseColor_110: -1300955796
+      BGCastle_KB1_BaseColor_115: -817512705
+      BGCastle_KB1_BaseColor_91: -84165427
+      BGCastle_KB1_BaseColor_60: 483978090
+      BGCastle_KB1_BaseColor_82: 353093811
+      BGCastle_KB1_BaseColor_65: 1324218961
+      BGCastle_KB1_BaseColor_8: 2006463529
+      BGCastle_KB1_BaseColor_4: 1645350290
+      BGCastle_KB1_BaseColor_25: -1864628994
+      BGCastle_KB1_BaseColor_120: -773149894
+      BGCastle_KB1_BaseColor_124: 216901279
+      BGCastle_KB1_BaseColor_18: 185416786
+      BGCastle_KB1_BaseColor_89: 1662117514
+      BGCastle_KB1_BaseColor_173: -1925054808
+      BGCastle_KB1_BaseColor_184: 1375172491
+      BGCastle_KB1_BaseColor_183: 1963823770
+      BGCastle_KB1_BaseColor_15: 342251719
+      BGCastle_KB1_BaseColor_150: 835354954
+      BGCastle_KB1_BaseColor_95: 527472641
+      BGCastle_KB1_BaseColor_175: 1177885702
+      BGCastle_KB1_BaseColor_111: 1818725932
+      BGCastle_KB1_BaseColor_178: -1504590768
+      BGCastle_KB1_BaseColor_186: 606064019
+      BGCastle_KB1_BaseColor_162: -484212126
+      BGCastle_KB1_BaseColor_170: 385869451
+      BGCastle_KB1_BaseColor_100: 975197299
+      BGCastle_KB1_BaseColor_7: 1560768671
+      BGCastle_KB1_BaseColor_165: 974769239
+      BGCastle_KB1_BaseColor_56: 1861027930
+      BGCastle_KB1_BaseColor_39: -866532447
+      BGCastle_KB1_BaseColor_101: -1810879180
+      BGCastle_KB1_BaseColor_50: -1288211312
+      BGCastle_KB1_BaseColor_1: -813080148
+      BGCastle_KB1_BaseColor_133: -1562138215
+      BGCastle_KB1_BaseColor_103: 1489463785
+      BGCastle_KB1_BaseColor_16: 142977673
+      BGCastle_KB1_BaseColor_130: 1156538484
+      BGCastle_KB1_BaseColor_123: 1669308183
+      BGCastle_KB1_BaseColor_67: 1943167903
+      BGCastle_KB1_BaseColor_135: 1765008843
+      BGCastle_KB1_BaseColor_116: 1704938412
+      BGCastle_KB1_BaseColor_160: 1535334291
+      BGCastle_KB1_BaseColor_5: -1879073449
+      BGCastle_KB1_BaseColor_57: 1503691456
+      BGCastle_KB1_BaseColor_152: -1057823894
+      BGCastle_KB1_BaseColor_149: -889529473
+      BGCastle_KB1_BaseColor_38: -1881092445
+      BGCastle_KB1_BaseColor_142: 626952509
+      BGCastle_KB1_BaseColor_118: -159368603
+      BGCastle_KB1_BaseColor_134: -972918155
+      BGCastle_KB1_BaseColor_24: -2006827552
+      BGCastle_KB1_BaseColor_161: 1046130449
+      BGCastle_KB1_BaseColor_10: -629838624
+      BGCastle_KB1_BaseColor_164: -872272638
+      BGCastle_KB1_BaseColor_85: 932710491
+      BGCastle_KB1_BaseColor_131: -468791639
+      BGCastle_KB1_BaseColor_26: 2078849166
+      BGCastle_KB1_BaseColor_87: -1112008168
+      BGCastle_KB1_BaseColor_51: -1369705261
+      BGCastle_KB1_BaseColor_158: 2094449679
+      BGCastle_KB1_BaseColor_45: -407713284
+      BGCastle_KB1_BaseColor_177: -2100194064
+      BGCastle_KB1_BaseColor_126: -1921220066
+      BGCastle_KB1_BaseColor_54: -676599851
+      BGCastle_KB1_BaseColor_22: 127340423
+      BGCastle_KB1_BaseColor_141: -1976719473
+      BGCastle_KB1_BaseColor_64: 639604342
+      BGCastle_KB1_BaseColor_180: -1925000447
+      BGCastle_KB1_BaseColor_148: -632199868
+      BGCastle_KB1_BaseColor_41: 343792080
+      BGCastle_KB1_BaseColor_49: 423333158
+      BGCastle_KB1_BaseColor_58: -993712636
+      BGCastle_KB1_BaseColor_61: -1090003109
+      BGCastle_KB1_BaseColor_73: 1311805775
+      BGCastle_KB1_BaseColor_97: 1944888358
+      BGCastle_KB1_BaseColor_138: 442333443
+      BGCastle_KB1_BaseColor_84: 69776548
+      BGCastle_KB1_BaseColor_77: 303234798
+      BGCastle_KB1_BaseColor_80: 886680545
+      BGCastle_KB1_BaseColor_151: -970610777
+      BGCastle_KB1_BaseColor_179: -1071392223
+      BGCastle_KB1_BaseColor_185: 1866971368
+      BGCastle_KB1_BaseColor_33: -1190908251
+      BGCastle_KB1_BaseColor_139: 551462970
+      BGCastle_KB1_BaseColor_71: 1080388354
+      BGCastle_KB1_BaseColor_63: -836331878
+      BGCastle_KB1_BaseColor_145: -1062805895
+      BGCastle_KB1_BaseColor_113: -154785575
+      BGCastle_KB1_BaseColor_47: 2134608872
+      BGCastle_KB1_BaseColor_128: 1115896433
+      BGCastle_KB1_BaseColor_90: 984365613
+      BGCastle_KB1_BaseColor_143: -87631949
+      BGCastle_KB1_BaseColor_34: 324477766
+      BGCastle_KB1_BaseColor_36: -807948864
+      BGCastle_KB1_BaseColor_20: -737991637
+      BGCastle_KB1_BaseColor_98: -981536956
+      BGCastle_KB1_BaseColor_125: 729509171
+      BGCastle_KB1_BaseColor_78: -1859913458
+      BGCastle_KB1_BaseColor_0: -197292714
+      BGCastle_KB1_BaseColor_99: 388338040
+      BGCastle_KB1_BaseColor_74: -410042899
+      BGCastle_KB1_BaseColor_127: -2052226084
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
