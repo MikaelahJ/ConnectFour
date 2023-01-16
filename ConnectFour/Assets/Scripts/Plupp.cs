@@ -15,6 +15,11 @@ public class Plupp : MonoBehaviour
         col = GetComponent<CircleCollider2D>();
     }
 
+    private void Update()
+    {
+        if(transform.parent.name == "GreenHolder" || transform.parent.name == "PurpleHolder")
+            transform.up = -rb.velocity;
+    }
 
     public void Push(Vector3 force)
     {

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 989476752917446627}
   - component: {fileID: 989476752917446624}
   - component: {fileID: 681477794722905906}
+  - component: {fileID: 2923060929109480578}
   m_Layer: 0
   m_Name: GreenPlupp
   m_TagString: Green
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 989476752917446625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: 3.17, z: 0}
-  m_LocalScale: {x: 0.87755084, y: 0.87755084, z: 0.87755084}
+  m_LocalScale: {x: 1.0296897, y: 1.0296897, z: 1.0296897}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,9 +76,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.8773585, b: 0.113365576, a: 1}
+  m_SortingOrder: -10
+  m_Sprite: {fileID: 21300000, guid: a3be0dcdc1532794cb18467ad7b47901, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.5568628, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,3 +139,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   col: {fileID: 0}
+--- !u!95 &2923060929109480578
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989476752917446625}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e554a710558ee81469cb76a8cccb99bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

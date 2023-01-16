@@ -60,6 +60,10 @@ public class GameManager : MonoBehaviour
             Debug.LogFormat("takenCell: {0} - {1}", kvp.Key, kvp.Value);
         }
 
+        grid[1, 1] = 2;
+        int[] test = new int[2] { 1, 1 };
+        Debug.Log(grid.GetValue(test));
+
         StartCoroutine(CheckXAxis(cellNumber));
     }
 
@@ -76,7 +80,7 @@ public class GameManager : MonoBehaviour
             if (i == 1)
                 cellToCheck = cellNumber + 1;
 
-            if (i == 0 && cellNumber % 7 == 0)//Check if at left/right wall, doesn't need to check x axis
+            if (i == 0 && cellNumber % 7 == 0)//Check if at left/right wall
             {
                 continue;
             }

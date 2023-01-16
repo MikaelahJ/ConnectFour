@@ -37,7 +37,6 @@ public class Cannon : MonoBehaviour
 
         plupp = pluppHolder.GetComponentInChildren<Plupp>();
         plupp.transform.position = shootPos.transform.position;
-        plupp.transform.parent = used.transform;
     }
 
     private void SpawnPluppar()
@@ -92,6 +91,7 @@ public class Cannon : MonoBehaviour
 
     void OnDragEnd()
     {
+        plupp.transform.parent = used.transform;
         plupp.ActivateRb();
         plupp.Push(force);
 

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
-    private float timer;
-    private int timeToBeStill = 2;
     private bool isInTrigger;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +23,7 @@ public class Cell : MonoBehaviour
             gridScript.SetCellTaken(gameObject, collision.gameObject);
             gameObject.SetActive(false);
             collision.GetComponent<Plupp>().DeactivateRb();
+            collision.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center;
         }
     }
 

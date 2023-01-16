@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5709363859651655996}
   - component: {fileID: 5709363859651655999}
   - component: {fileID: 5473553062475708909}
+  - component: {fileID: 7436147592117733794}
   m_Layer: 0
   m_Name: PurplePlupp
   m_TagString: Purple
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 5709363859651655998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.869999, y: -3.88, z: 0}
-  m_LocalScale: {x: 0.87755084, y: 0.87755084, z: 0.87755084}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.02969, y: 1.02969, z: 1.02969}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,9 +76,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.78248864, g: 0, b: 0.8784314, a: 1}
+  m_SortingOrder: -10
+  m_Sprite: {fileID: 21300000, guid: d107e1f919873c948b6f5211ceb05312, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,3 +139,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   col: {fileID: 0}
+--- !u!95 &7436147592117733794
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5709363859651655998}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3bac11c25276c794e9ac27fe445c47c1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
