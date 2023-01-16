@@ -10,13 +10,14 @@ public class Cell : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        StopCoroutine(AddPlupp(collision));
         isInTrigger = true;
         StartCoroutine(AddPlupp(collision));
     }
 
     private IEnumerator AddPlupp(Collider2D collision)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
 
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null && isInTrigger)
         {
@@ -30,5 +31,6 @@ public class Cell : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInTrigger = false;
+        StopCoroutine(AddPlupp(collision));
     }
 }

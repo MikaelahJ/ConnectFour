@@ -28,29 +28,30 @@ public class GameManager : MonoBehaviour
     private bool greenTurn = true;
     public bool ongoingTurn;
 
+    private int cellToCheck = 0;
     private int greenAmountInLine = 0;
     private int purpleAmountInLine = 0;
 
     public Dictionary<int, bool> takenCell = new();
+    public int[,] grid = new int[6, 7];
 
     private void Start()
     {
         gridBox = GameObject.Find("GridBox");
-
         //if (greenTurn)
         //    RotateBoxLeft();
         //else if (!greenTurn)
         //    RotateBoxRight();
     }
 
-    private void RotateBoxLeft()
-    {
-        gridBox.transform.Rotate(0, 0, 20);
-    }
-    private void RotateBoxRight()
-    {
-        gridBox.transform.Rotate(0, 0, -20);
-    }
+    //private void RotateBoxLeft()
+    //{
+    //    gridBox.transform.Rotate(0, 0, 20);
+    //}
+    //private void RotateBoxRight()
+    //{
+    //    gridBox.transform.Rotate(0, 0, -20);
+    //}
 
     public void StartCheckWin(int cellNumber)
     {
@@ -65,11 +66,11 @@ public class GameManager : MonoBehaviour
     private IEnumerator CheckXAxis(int cellNumber)
     {
         yield return new WaitForSeconds(0.2f);
-        //                                                                                  -1  +7  +1
-        //kolla rad +-1 och collumn +-7 samt +-1 på cellen ovanför och under för diagonalen -1 cell +1
-        //                                                                                  -1  -7  +1
+        // -1  +7  +1
+        // -1 cell +1
+        // -1  -7  +1
 
-        int cellToCheck = cellNumber - 1;
+        cellToCheck = cellNumber - 1;
         for (int i = 0; i < 2; i++)
         {
             if (i == 1)
@@ -129,77 +130,74 @@ public class GameManager : MonoBehaviour
                                 break;
                             }
                         }
-
                     }
                 }
-                
             }
         }
         ResetLineAmounts();
         CheckYAxis(cellNumber);
-
-
-        //for (int i = 0; i < 4; i++)//check for line y,x axis
-        //{
-        //    if (i == 0)
-        //    {
-        //        if (cellNumber % 7 == 0)//Check if at left wall, doesn't need to check for dots to the left
-        //        {
-        //            continue;
-        //        }
-        //    }
-        //    else if (i == 1)
-        //    {
-
-        //        cellToCheck = cellNumber + 1;
-        //    }
-        //    else if (i == 2)
-        //    {
-        //        if (cellNumber - 7 < 0)//Check if at top
-        //        {
-        //            continue;
-        //        }
-        //        cellToCheck = cellNumber - 7;
-        //    }
-        //    else if (i == 3)
-        //    {
-        //        if (cellNumber + 7 > 41)//Check if at top
-        //        {
-        //            continue;
-        //        }
-        //        cellToCheck = cellNumber + 7;
-        //    }
-
-
-
-
-        //    if (takenCell.ContainsKey(cellToCheck))//is the cell taken
-        //    {
-        //        if (takenCell[cellToCheck] == takenCell[cellNumber])//if true then same color of dot
-        //        {
-        //            if (takenCell[cellNumber])
-        //                greenAmountInLine++;
-        //            else
-        //                purpleAmountInLine++;
-
-        //            Debug.Log("Green amountinLine " + greenAmountInLine);
-        //            Debug.Log("Purple amountinLine " + purpleAmountInLine);
-        //        }
-        //    }
-        //    if (i == 2 || i == 3)//check diagonal up
-        //    {
-        //        int diagonalCellCheck = cellToCheck - 1;
-
-        //        if (takenCell.ContainsKey(diagonalCellCheck))
-        //        {
-
-        //        }
-        //    }
-        //}
     }
+
     private void CheckYAxis(int cellNumber)
     {
-        Debug.Log("check y axis");
+        cellToCheck = cellNumber - 7;
+        for (int i = 0; i < 2; i++)
+        {
+            if (i == 1 && cellNumber + 7 < 42)
+                cellToCheck = cellNumber + 7;
+
+            if (i == 0 && cellNumber - 7 < 0)
+                continue;
+
+            if (takenCell.ContainsKey(cellToCheck))//is the cell taken
+            {
+                while (takenCell.ContainsKey(cellToCheck))
+                {
+                    if (takenCell[cellToCheck] == takenCell[cellNumber])//if true then same color of dot
+                    {
+                        if (takenCell[cellNumber])
+                            greenAmountInLine++;
+
+                        else
+                            purpleAmountInLine++;
+
+                        Debug.Log("Green amountinLine " + greenAmountInLine);
+                        Debug.Log("Purple amountinLine " + purpleAmountInLine);
+
+                        if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
+                        {
+                            ShowWinner();
+                            break;
+                        }
+                        Debug.Log("celltoCheck " + cellToCheck);
+                        if (i == 0)
+                        {
+                            cellToCheck -= 7;
+                            if (cellToCheck < 0)
+                            {
+                                break;
+                            }
+                        }
+
+                        if (i == 1)
+                        {
+                            cellToCheck += 7;
+                            if (cellToCheck > 42)
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ResetLineAmounts();
+        CheckDiagonal(cellNumber);
+    }
+
+    private void CheckDiagonal(int cellNumber)
+    {
+        Debug.Log("checkDiagonal");
     }
 
     private void ResetLineAmounts()
