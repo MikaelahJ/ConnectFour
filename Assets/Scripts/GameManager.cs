@@ -46,10 +46,15 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
             cam = Camera.main;
+
+            gridBox = GameObject.Find("GridBox");
+            greenCanon = GameObject.Find("GreenCanon");
+            purpleCanon = GameObject.Find("PurpleCanon");
+
+            GreenTurn();
+
         }
-        gridBox = GameObject.Find("GridBox");
-        greenCanon = GameObject.Find("GreenCanon");
-        purpleCanon = GameObject.Find("PurpleCanon");
+
 
         //if (greenTurn)
         //    RotateBoxLeft();
@@ -62,6 +67,7 @@ public class GameManager : MonoBehaviour
     {
         if (greenTurn)
         {
+            PurpleTurn();
             greenTurn = false;
             cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
         }
@@ -69,6 +75,7 @@ public class GameManager : MonoBehaviour
         {
             greenTurn = true;
             cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
+            GreenTurn();
         }
     }
 
@@ -79,6 +86,7 @@ public class GameManager : MonoBehaviour
 
     private void PurpleTurn()
     {
+        Debug.Log("hej");
         purpleCanon.GetComponent<Cannon>().GetPlupp();
     }
 
