@@ -54,12 +54,6 @@ public class GameManager : MonoBehaviour
             GreenTurn();
 
         }
-
-
-        //if (greenTurn)
-        //    RotateBoxLeft();
-        //else if (!greenTurn)
-        //    RotateBoxRight();
     }
 
 
@@ -86,7 +80,6 @@ public class GameManager : MonoBehaviour
 
     private void PurpleTurn()
     {
-        Debug.Log("hej");
         purpleCanon.GetComponent<Cannon>().GetPlupp();
     }
 
@@ -114,6 +107,7 @@ public class GameManager : MonoBehaviour
         cellToCheck = cellNumber - 1;
         for (int i = 0; i < 2; i++)
         {
+
             if (i == 1)
                 cellToCheck = cellNumber + 1;
 
