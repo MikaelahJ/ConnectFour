@@ -24,6 +24,8 @@ public class Cell : MonoBehaviour
             gameObject.SetActive(false);
             collision.GetComponent<Plupp>().DeactivateRb();
             collision.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center;
+
+            GameManager.Instance.ChangeTurn();
         }
     }
 
