@@ -6,9 +6,7 @@ public class CameraMover : MonoBehaviour
 {
     [HideInInspector]
     public bool isGreenTurn = true;
-
     private float camMoveSpeed = 4f;
-
 
     void Update()
     {

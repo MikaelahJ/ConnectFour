@@ -46,24 +46,11 @@ public class GameManager : MonoBehaviour
             cam = Camera.main;
         }
         gridBox = GameObject.Find("GridBox");
-        //if (greenTurn)
-        //    RotateBoxLeft();
-        //else if (!greenTurn)
-        //    RotateBoxRight();
     }
 
-    //private void RotateBoxLeft()
-    //{
-    //    gridBox.transform.Rotate(0, 0, 20);
-    //}
-    //private void RotateBoxRight()
-    //{
-    //    gridBox.transform.Rotate(0, 0, -20);
-    //}
 
     public void ChangeTurn()
     {
-        Debug.Log(greenTurn);
         if (greenTurn)
         {
             greenTurn = false;
@@ -74,8 +61,6 @@ public class GameManager : MonoBehaviour
             greenTurn = true;
             cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
         }
-        Debug.Log(greenTurn);
-
     }
 
     private void GreenTurn()

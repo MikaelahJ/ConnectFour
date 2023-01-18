@@ -41,6 +41,7 @@ public class Cannon : MonoBehaviour
 
     private void SpawnPluppar()
     {
+        //gör en object pool
         for (int i = 0; i <= 5; i++)
         {
             Vector2 spawnPos = new Vector2(pluppHolder.transform.position.x + UnityEngine.Random.Range(-1f, 1f), pluppHolder.transform.position.y + UnityEngine.Random.Range(-1f, 1f));
