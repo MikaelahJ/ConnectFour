@@ -2734,7 +2734,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 28.445261, y: 17.020525}
+  m_Offset: {x: 29.011217, y: 17.020525}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2745,7 +2745,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2642097, y: 35.04105}
+  m_Size: {x: 5.396122, y: 35.04105}
   m_EdgeRadius: 0
 --- !u!61 &433275580
 BoxCollider2D:
@@ -5397,8 +5397,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5486532, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.09, y: 1}
+  m_EdgeRadius: 0.06
 --- !u!1001 &673538047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5769,8 +5769,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5486532, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.09, y: 1}
+  m_EdgeRadius: 0.06
 --- !u!212 &688151976
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8507,8 +8507,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5486532, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.09, y: 1}
+  m_EdgeRadius: 0.06
 --- !u!212 &1053077908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10246,8 +10246,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5486532, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.09, y: 1}
+  m_EdgeRadius: 0.06
 --- !u!212 &1231113915
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11241,8 +11241,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5486532, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.09, y: 1}
+  m_EdgeRadius: 0.06
 --- !u!212 &1387411007
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14176,8 +14176,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5486532, y: 1}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.09, y: 1}
+  m_EdgeRadius: 0.06
 --- !u!212 &1835334530
 SpriteRenderer:
   m_ObjectHideFlags: 0
