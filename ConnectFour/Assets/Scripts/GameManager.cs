@@ -25,8 +25,12 @@ public class GameManager : MonoBehaviour
 
     private GameObject gridBox;
 
-    private bool greenTurn = true;
+    public Camera cam;
+
+    public bool greenTurn = true;
     public bool ongoingTurn;
+
+
 
     private int cellToCheck = 0;
     private int greenAmountInLine = 0;
@@ -37,6 +41,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            cam = Camera.main;
+        }
         gridBox = GameObject.Find("GridBox");
         //if (greenTurn)
         //    RotateBoxLeft();
@@ -53,6 +61,33 @@ public class GameManager : MonoBehaviour
     //    gridBox.transform.Rotate(0, 0, -20);
     //}
 
+    public void ChangeTurn()
+    {
+        Debug.Log(greenTurn);
+        if (greenTurn)
+        {
+            greenTurn = false;
+            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
+        }
+        else
+        {
+            greenTurn = true;
+            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
+        }
+        Debug.Log(greenTurn);
+
+    }
+
+    private void GreenTurn()
+    {
+        
+    }
+
+    private void PurpleTurn()
+    {
+        
+    }
+
     public void StartCheckWin(int cellNumber)
     {
         foreach (KeyValuePair<int, bool> kvp in takenCell)
@@ -62,7 +97,7 @@ public class GameManager : MonoBehaviour
 
         grid[1, 1] = 2;
         int[] test = new int[2] { 1, 1 };
-        Debug.Log(grid.GetValue(test));
+        //Debug.Log(grid.GetValue(test));
 
         StartCoroutine(CheckXAxis(cellNumber));
     }

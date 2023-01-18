@@ -18,6 +18,9 @@ public class Plupp : MonoBehaviour
     private void Update()
     {
         if(transform.parent.name == "GreenHolder" || transform.parent.name == "PurpleHolder")
+        {
+            //transform.rotation = ;
+        }
             transform.up = -rb.velocity;
     }
 

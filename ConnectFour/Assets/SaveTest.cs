@@ -5,15 +5,22 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
+[Serializable]
+class PlayerData
+{
+    public string Name;
+    public float ColorHUE;
+    public bool Hidden;
+    public Vector2 Position;
+
+}
+
 public class SaveTest : MonoBehaviour
 {
     private const string PLAYER_NAME_KEY = "PLAYER_NAME";
     public Slider slider;
     public TMP_InputField inputField;
     public Button button;
-
-    string name;
-    float color;
 
     void Start()
     {
@@ -24,7 +31,10 @@ public class SaveTest : MonoBehaviour
         }
 
         inputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+
+        Save();
     }
+
 
     private void ValueChangeCheck()
     {
@@ -35,7 +45,33 @@ public class SaveTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            PlayerPrefs.DeleteAll();
+            //PlayerPrefs.DeleteAll();
         }
+    }
+
+    void Save()
+    {
+        PlayerData saveData = new PlayerData();
+
+        saveData.Name = inputField.text;
+        saveData.ColorHUE = slider.value;
+        saveData.Hidden = false;
+        //saveData.Position =player.transform.position;
+
+        string jsonString = JsonUtility.ToJson(saveData);
+
+        PlayerPrefs.SetString("PlayerSaveData", jsonString);
+
+    }
+    void Load()
+    {
+        //Get the saved jsonString
+        string jsonString = PlayerPrefs.GetString("PlayerSaveData");
+
+        //Convert the data to a object
+        PlayerData loadedData = JsonUtility.FromJson<PlayerData>(jsonString);
+        
+        //We probably would like to add some code in this function
+        //that runs if we get broken or no data.
     }
 }
