@@ -8,6 +8,7 @@ TagManager:
   - Cell
   - Purple
   - Floor
+  - Holder
   layers:
   - Default
   - TransparentFX

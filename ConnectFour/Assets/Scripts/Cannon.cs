@@ -86,7 +86,7 @@ public class Cannon : MonoBehaviour
 
         Debug.DrawLine(startPoint, endPoint);
 
-        trajectory.UpdateDots(plupp.pos, force);
+        trajectory.UpdateDots(plupp.Pos, force);
     }
 
     void OnDragEnd()
