@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     #endregion
 
     private GameObject gridBox;
+    private GameObject greenCanon;
+    private GameObject purpleCanon;
 
     public Camera cam;
 
@@ -46,6 +48,9 @@ public class GameManager : MonoBehaviour
             cam = Camera.main;
         }
         gridBox = GameObject.Find("GridBox");
+        greenCanon = GameObject.Find("GreenCanon");
+        purpleCanon = GameObject.Find("PurpleCanon");
+
         //if (greenTurn)
         //    RotateBoxLeft();
         //else if (!greenTurn)
@@ -80,12 +85,12 @@ public class GameManager : MonoBehaviour
 
     private void GreenTurn()
     {
-        
+        greenCanon.GetComponent<Cannon>().GetPlupp();
     }
 
     private void PurpleTurn()
     {
-        
+        purpleCanon.GetComponent<Cannon>().GetPlupp();
     }
 
     public void StartCheckWin(int cellNumber)

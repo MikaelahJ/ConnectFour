@@ -30,7 +30,7 @@ public class Cannon : MonoBehaviour
         GetPlupp();
     }
 
-    private void GetPlupp()
+    public void GetPlupp()
     {
         if (pluppHolder.transform.childCount == 0)
             SpawnPluppar();
@@ -98,6 +98,6 @@ public class Cannon : MonoBehaviour
         trajectory.HideDots();
 
         plupp = null;
-        Invoke(nameof(GetPlupp), 2);
+        //Invoke(nameof(GetPlupp), 2);
     }
 }
