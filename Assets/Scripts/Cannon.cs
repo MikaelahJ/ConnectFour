@@ -27,6 +27,7 @@ public class Cannon : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        //GetPlupp();
     }
 
     public void GetPlupp()

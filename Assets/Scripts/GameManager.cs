@@ -32,11 +32,14 @@ public class GameManager : MonoBehaviour
     public bool greenTurn = true;
     public bool ongoingTurn;
 
-
-
     private int cellToCheck = 0;
     private int greenAmountInLine = 0;
     private int purpleAmountInLine = 0;
+
+    bool bottom = false;
+    bool top = false;
+    bool right = false;
+    bool left = false;
 
     public Dictionary<int, bool> takenCell = new();
     public int[,] grid = new int[6, 7];
@@ -83,156 +86,220 @@ public class GameManager : MonoBehaviour
         purpleCanon.GetComponent<Cannon>().GetPlupp();
     }
 
-    public void StartCheckWin(int cellNumber)
+    public void StartCheckWin(int x, int y)
     {
+        // -1  +7  +1
+        // -1 cell +1
+        // -1  -7  +1
+
         foreach (KeyValuePair<int, bool> kvp in takenCell)
         {
-            Debug.LogFormat("takenCell: {0} - {1}", kvp.Key, kvp.Value);
+            //Debug.LogFormat("takenCell: {0} - {1}", kvp.Key, kvp.Value);
         }
 
         grid[1, 1] = 2;
         int[] test = new int[2] { 1, 1 };
         //Debug.Log(grid.GetValue(test));
 
-        StartCoroutine(CheckXAxis(cellNumber));
+        StartCoroutine(CheckXAxis(x, y));
     }
 
-    private IEnumerator CheckXAxis(int cellNumber)
+    private IEnumerator CheckXAxis(int y, int x)
     {
         yield return new WaitForSeconds(0.2f);
-        // -1  +7  +1
         // -1 cell +1
-        // -1  -7  +1
+        cellToCheck = x + 1;
 
-        cellToCheck = cellNumber - 1;
         for (int i = 0; i < 2; i++)
         {
+            if (i == 0 && x == 6)//Check if at right wall
+            {
+                continue;
+            }
 
             if (i == 1)
-                cellToCheck = cellNumber + 1;
+                cellToCheck = x - 1;
 
-            if (i == 0 && cellNumber % 7 == 0)//Check if at left/right wall
-            {
+            if (i == 1 && x == 0)//Check if at left wall
                 continue;
-            }
 
-            bool isAtRightWall = false;
-            if (cellNumber == 6 || cellNumber == 13 || cellNumber == 20 || cellNumber == 27 || cellNumber == 33 || cellNumber == 40)
+            if (takenCell.ContainsKey(grid[y, cellToCheck]))//is the cell taken
             {
-                isAtRightWall = true;
-            }
-
-            if (i == 1 && isAtRightWall)
-            {
-                continue;
-            }
-
-            if (takenCell.ContainsKey(cellToCheck))//is the cell taken
-            {
-                while (takenCell.ContainsKey(cellToCheck))
+                while (takenCell.ContainsKey(grid[y, cellToCheck]))
                 {
-                    if (takenCell[cellToCheck] == takenCell[cellNumber])//if true then same color of dot
+                    if (takenCell[grid[y, cellToCheck]] == takenCell[grid[y, x]])//if true then same color of dot
                     {
-                        if (takenCell[cellNumber])
+                        if (takenCell[grid[y, x]])//if true then green 
                             greenAmountInLine++;
 
-                        else
+                        else//else purple
                             purpleAmountInLine++;
-
-                        Debug.Log("Green amountinLine " + greenAmountInLine);
-                        Debug.Log("Purple amountinLine " + purpleAmountInLine);
 
                         if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
                         {
                             ShowWinner();
                             yield break;
                         }
-                        Debug.Log("celltoCheck " + cellToCheck);
+
                         if (i == 0)
                         {
+                            cellToCheck++;
+                            if (cellToCheck % 7 == 0)
+                            {
+                                break;
+                            }
+                        }
+
+                        if (i == 1)
+                        {
+                            if (cellToCheck == 0)
+                                break;
+
                             cellToCheck--;
                             if (cellToCheck < 0)
                             {
                                 break;
                             }
                         }
-
-                        if (i == 1)
-                        {
-                            cellToCheck++;
-                            if (cellToCheck == 7 || cellToCheck == 14 || cellToCheck == 21 || cellToCheck == 28 || cellToCheck == 35 || cellToCheck == 42)
-                            {
-                                break;
-                            }
-                        }
                     }
                 }
             }
         }
         ResetLineAmounts();
-        CheckYAxis(cellNumber);
+        CheckYAxis(y, x);
     }
 
-    private void CheckYAxis(int cellNumber)
-    {
-        cellToCheck = cellNumber - 7;
+    private void CheckYAxis(int y, int x)
+    {   //  +1  
+        // cell
+        //  -1 
+        cellToCheck = y + 1;
+
         for (int i = 0; i < 2; i++)
         {
-            if (i == 1 && cellNumber + 7 < 42)
-                cellToCheck = cellNumber + 7;
+            if (i == 1)
+                cellToCheck = y - 1;
 
-            if (i == 0 && cellNumber - 7 < 0)
+            if (cellToCheck < 0 || cellToCheck > 5)//check if outside top and bottom
                 continue;
 
-            if (takenCell.ContainsKey(cellToCheck))//is the cell taken
+            if (takenCell.ContainsKey(grid[cellToCheck, x]))//is the cell taken
             {
-                while (takenCell.ContainsKey(cellToCheck))
+                while (takenCell.ContainsKey(grid[cellToCheck, x]))
                 {
-                    if (takenCell[cellToCheck] == takenCell[cellNumber])//if true then same color of dot
+                    if (takenCell[grid[cellToCheck, x]] == takenCell[grid[y, x]])//if true then same color of dot
                     {
-                        if (takenCell[cellNumber])
+                        if (takenCell[grid[y, x]])//green
                             greenAmountInLine++;
 
-                        else
+                        else//purple
                             purpleAmountInLine++;
-
-                        Debug.Log("Green amountinLine " + greenAmountInLine);
-                        Debug.Log("Purple amountinLine " + purpleAmountInLine);
 
                         if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
                         {
                             ShowWinner();
                             break;
                         }
-                        Debug.Log("celltoCheck " + cellToCheck);
                         if (i == 0)
                         {
-                            cellToCheck -= 7;
-                            if (cellToCheck < 0)
-                            {
-                                break;
-                            }
+                            cellToCheck++;
                         }
 
+                        if (i == 0)
+                            cellToCheck++;
+
                         if (i == 1)
-                        {
-                            cellToCheck += 7;
-                            if (cellToCheck > 42)
-                            {
-                                break;
-                            }
-                        }
+                            cellToCheck--;
+
+                        if (cellToCheck < 0 || cellToCheck > 5)
+                            break;
                     }
                 }
             }
         }
         ResetLineAmounts();
-        CheckDiagonal(cellNumber);
+        CheckDiagonal(y, x);
     }
 
-    private void CheckDiagonal(int cellNumber)
+
+    private void CheckDiagonal(int y, int x)
     {
-        Debug.Log("checkDiagonal");
+        int step = 1;//each step is the next cell in diagonal line
+
+        for (int i = 0; i < 4; i++)
+        {
+            SetDiagonalCellToCheck(i, y, x, step);
+
+            Debug.Log(cellToCheck);
+
+            if (takenCell.ContainsKey(cellToCheck))//is the cell taken
+            {
+                while (takenCell.ContainsKey(cellToCheck))
+                {
+                    if (takenCell[cellToCheck] == takenCell[grid[y, x]])//if true then same color of dot
+                    {
+                        if (takenCell[grid[y, x]])//green
+                            greenAmountInLine++;
+
+                        else//purple
+                            purpleAmountInLine++;
+                        Debug.Log("GreenAmountInLine " + greenAmountInLine);
+                        Debug.Log("PurpleAmountInLine " + purpleAmountInLine);
+                        if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
+                        {
+                            ShowWinner();
+                            break;
+                        }
+                    }
+                    step++;
+                    SetDiagonalCellToCheck(i, y, x, step);
+                }
+            }
+            step = 1;
+            if (i == 1)
+                ResetLineAmounts();
+        }
+    }
+
+    private void SetDiagonalCellToCheck(int i, int y, int x, int step)
+    {
+        bottom = false;
+        top = false;
+        right = false;
+        left = false;
+
+        //check if at a border
+        if (y + step > 5)
+            bottom = true;
+        if (y - step < 0)
+            top = true;
+        if (x + step > 6)
+            right = true;
+        if (x - step < 0)
+            left = true;
+
+        switch (i)//set cellToCheck direction
+        {
+            case 0: //Check up-right /
+                if (!top && !right)
+                    cellToCheck = grid[y - step, x + step];
+                break;
+
+            case 1://Check down-left /
+                if (!bottom && !left)
+                    cellToCheck = grid[y + step, x - step];
+                break;
+
+            case 2://Check up-left \
+                if (!top && !left)
+                    cellToCheck = grid[y - step, x - step];
+                break;
+
+            case 3://Check down-right \
+                if (!bottom && !right)
+                    cellToCheck = grid[y + step, x + step];
+                break;
+        }
     }
 
     private void ResetLineAmounts()
@@ -240,6 +307,7 @@ public class GameManager : MonoBehaviour
         greenAmountInLine = 0;
         purpleAmountInLine = 0;
     }
+
     private void ShowWinner()
     {
         if (greenAmountInLine >= 3)
@@ -248,5 +316,4 @@ public class GameManager : MonoBehaviour
         if (purpleAmountInLine >= 3)
             Debug.Log("purple wins");
     }
-
 }

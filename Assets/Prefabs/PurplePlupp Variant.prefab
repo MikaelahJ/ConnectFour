@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurplePlupp Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 989476752917446625, guid: 536b41d73a5f1e14aaa77c972527fb2e, type: 3}
+      propertyPath: m_TagString
+      value: Purple
+      objectReference: {fileID: 0}
     - target: {fileID: 989476752917446626, guid: 536b41d73a5f1e14aaa77c972527fb2e, type: 3}
       propertyPath: m_Sprite
       value: 
