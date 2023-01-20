@@ -27,7 +27,7 @@ public class BoardGrid : MonoBehaviour
             color = true;
         }
         //if color green = true, purple = false
-        GameManager.Instance.takenCell.Add(cells[cell], color);
+        transform.GetComponent<CheckLines>().takenCell.Add(cells[cell], color);
         transform.GetComponent<CoordinatesOf>().GetCoordinates(cells[cell]);
         
         //GameManager.Instance.StartCheckWin(cells[cell]);

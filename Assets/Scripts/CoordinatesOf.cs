@@ -7,20 +7,20 @@ public class CoordinatesOf : MonoBehaviour
     int xAxis;
     int yAxis;
 
+    private CheckLines checkLines;
     private void Start()
     {
-        xAxis = GameManager.Instance.grid.GetLength(0);
-        yAxis = GameManager.Instance.grid.GetLength(1);
+        checkLines = transform.GetComponent<CheckLines>();
+        xAxis = checkLines.grid.GetLength(0);
+        yAxis = checkLines.grid.GetLength(1);
 
         int i = 0;
         for (int y = 0; y < xAxis; y++)
         {
             for (int x = 0; x < yAxis; x++)
             {
-                GameManager.Instance.grid[y, x] = i;
+                checkLines.grid[y, x] = i;
                 i++;
-                //Debug.Log("X " + x);
-                //Debug.Log("Y " + y);
             }
         }
     }
@@ -31,9 +31,10 @@ public class CoordinatesOf : MonoBehaviour
         {
             for (int x = 0; x < yAxis; x++)
             {
-                if (GameManager.Instance.grid[y, x].Equals(cellNumber))
+                if (checkLines.grid[y, x].Equals(cellNumber))
                 {
-                    GameManager.Instance.StartCheckWin(y, x);
+                    Debug.Log("Hej");
+                    checkLines.CheckXAxis(y, x);
                 }
             }
         }
