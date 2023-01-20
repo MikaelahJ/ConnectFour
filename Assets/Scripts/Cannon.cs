@@ -15,6 +15,7 @@ public class Cannon : MonoBehaviour
     [SerializeField] private GameObject shootPos;
     [SerializeField] private GameObject pluppHolder;
     private Plupp plupp;
+    private Animator animator;
 
     private Vector2 startPoint;
     private Vector2 endPoint;
@@ -27,6 +28,7 @@ public class Cannon : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
+        animator = GetComponent<Animator>();
         //GetPlupp();
     }
 
@@ -92,6 +94,7 @@ public class Cannon : MonoBehaviour
 
     void OnDragEnd()
     {
+        animator.SetTrigger("Shoot");
         plupp.transform.parent = used.transform;
         plupp.ActivateRb();
         plupp.Push(force);
