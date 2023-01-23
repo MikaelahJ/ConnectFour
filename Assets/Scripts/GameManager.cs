@@ -31,10 +31,6 @@ public class GameManager : MonoBehaviour
     public bool greenTurn = true;
     public bool ongoingTurn;
 
-
-
-
-
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "GameScene")
