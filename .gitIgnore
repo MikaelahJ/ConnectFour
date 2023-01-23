@@ -89,3 +89,7 @@ ProjectSettings/Packages/com.unity.polybrush/Settings.json
 
 # Unity Recorder recordings
 Recordings/
+
+# Firebase
+google-services.json
+FirebaseCppApp-10_3_0.bundle

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "827824795539",
+    "firebase_url": "https://connect4-35fee-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "connect4-35fee",
+    "storage_bucket": "connect4-35fee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827824795539:android:c475dda1a9b1284e3a8266",
+        "android_client_info": {
+          "package_name": "com.YrgoMJ.Connect4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827824795539-o0gec1sjpbi1h5uinbd3as4u7bfu69r1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz7XLFz0QSXCRRqthLPswRwpo8wykAoM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827824795539-o0gec1sjpbi1h5uinbd3as4u7bfu69r1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
