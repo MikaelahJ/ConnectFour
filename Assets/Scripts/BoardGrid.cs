@@ -29,7 +29,10 @@ public class BoardGrid : MonoBehaviour
         //if color green = true, purple = false
         transform.GetComponent<CheckLines>().takenCell.Add(cells[cell], color);
         transform.GetComponent<CoordinatesOf>().GetCoordinates(cells[cell]);
-        
-        //GameManager.Instance.StartCheckWin(cells[cell]);
+
+        //foreach (KeyValuePair<int, bool> kvp in transform.GetComponent<CheckLines>().takenCell)
+        //{
+        //    Debug.LogFormat("TakenCell: {0} - {1}", kvp.Key, kvp.Value);
+        //}
     }
 }

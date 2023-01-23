@@ -41,6 +41,7 @@ public class CheckLines : MonoBehaviour
 
                 while (takenCell.ContainsKey(grid[y, cellToCheck]))
                 {
+                    Debug.Log(takenCell[grid[y, cellToCheck]] + " " + takenCell[grid[y, x]]);
                     if (takenCell[grid[y, cellToCheck]] == takenCell[grid[y, x]])//if true then same color of dot
                     {
                         Debug.Log("same color");
@@ -50,6 +51,9 @@ public class CheckLines : MonoBehaviour
 
                         else//else purple
                             purpleAmountInLine++;
+
+                        Debug.Log("green " + greenAmountInLine);
+                        Debug.Log("purple " + purpleAmountInLine);
 
                         if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
                         {
@@ -78,6 +82,7 @@ public class CheckLines : MonoBehaviour
                             }
                         }
                     }
+                    else break;
                 }
             }
         }
@@ -111,14 +116,13 @@ public class CheckLines : MonoBehaviour
                         else//purple
                             purpleAmountInLine++;
 
+                        Debug.Log("green " + greenAmountInLine);
+                        Debug.Log("purple " + purpleAmountInLine);
+
                         if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
                         {
                             GameManager.Instance.ShowWinner(greenAmountInLine, purpleAmountInLine);
                             break;
-                        }
-                        if (i == 0)
-                        {
-                            cellToCheck++;
                         }
 
                         if (i == 0)
@@ -130,6 +134,7 @@ public class CheckLines : MonoBehaviour
                         if (cellToCheck < 0 || cellToCheck > 5)
                             break;
                     }
+                    else break;
                 }
             }
         }
@@ -146,7 +151,7 @@ public class CheckLines : MonoBehaviour
         {
             SetDiagonalCellToCheck(i, y, x, step);
 
-            Debug.Log(cellToCheck);
+            //Debug.Log(cellToCheck);
 
             if (takenCell.ContainsKey(cellToCheck))//is the cell taken
             {
@@ -159,12 +164,18 @@ public class CheckLines : MonoBehaviour
 
                         else//purple
                             purpleAmountInLine++;
+
+                        Debug.Log("green " + greenAmountInLine);
+                        Debug.Log("purple " + purpleAmountInLine);
+
                         if (greenAmountInLine >= 3 || purpleAmountInLine >= 3)
                         {
                             GameManager.Instance.ShowWinner(greenAmountInLine, purpleAmountInLine);
                             break;
                         }
                     }
+                    else break;
+
                     step++;
                     SetDiagonalCellToCheck(i, y, x, step);
                 }
