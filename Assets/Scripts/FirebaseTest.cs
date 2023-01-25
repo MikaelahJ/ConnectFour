@@ -23,7 +23,7 @@ public class FirebaseTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-
+            
         }
             AnonymousSignIn();
 

@@ -6,7 +6,7 @@ using TMPro;
 using System;
 
 [Serializable]
-class PlayerData
+class PlayerData2
 {
     public string Name;
     public float ColorHUE;
@@ -51,7 +51,7 @@ public class SaveTest : MonoBehaviour
 
     void Save()
     {
-        PlayerData saveData = new PlayerData();
+        PlayerData2 saveData = new PlayerData2();
 
         saveData.Name = inputField.text;
         saveData.ColorHUE = slider.value;
@@ -69,8 +69,8 @@ public class SaveTest : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("PlayerSaveData");
 
         //Convert the data to a object
-        PlayerData loadedData = JsonUtility.FromJson<PlayerData>(jsonString);
-        
+        PlayerData2 loadedData = JsonUtility.FromJson<PlayerData2>(jsonString);
+
         //We probably would like to add some code in this function
         //that runs if we get broken or no data.
     }
