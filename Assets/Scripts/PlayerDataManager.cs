@@ -40,9 +40,9 @@ public class PlayerDataManager : MonoBehaviour
 
     public string GetEmail()
     {
-        if (PlayerPrefs.HasKey(PLAYER_EMAIL_KEY))
+        if (PlayerPrefs.HasKey("PlayerSaveData"))
         {
-            name = PlayerPrefs.GetString(PLAYER_EMAIL_KEY);
+            //name = JsonUtility.FromJson<PlayerPrefs>(PlayerSaveData);
             return name;
         }
         else
@@ -51,10 +51,10 @@ public class PlayerDataManager : MonoBehaviour
 
     public void SavePlayerInlog(string email, string password)
     {
-        PlayerPrefs.SetString(PLAYER_EMAIL_KEY, email);
+        //PlayerPrefs.SetString(PLAYER_EMAIL_KEY, email);
         PlayerData saveData = new PlayerData();
 
-        //saveData.Email = email;
+        saveData.Email = email;
         saveData.Password = password;
 
         string jsonString = JsonUtility.ToJson(saveData);

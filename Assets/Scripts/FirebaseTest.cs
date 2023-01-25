@@ -21,10 +21,7 @@ public class FirebaseTest : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            
-        }
+        if (Input.GetKeyDown(KeyCode.A))
             AnonymousSignIn();
 
         if (Input.GetKeyDown(KeyCode.D))
@@ -33,7 +30,8 @@ public class FirebaseTest : MonoBehaviour
 
     private void AnonymousSignIn()
     {
-        auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(task => {
+        auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(task =>
+        {
             if (task.Exception != null)
             {
                 Debug.LogWarning(task.Exception);
