@@ -3,6 +3,8 @@ using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Extensions;
+using TMPro;
+using UnityEngine.UI;
 
 class UserData
 {
@@ -14,29 +16,16 @@ class UserData
 
 public class FirebaseSignIn : MonoBehaviour
 {
-    public static FirebaseSignIn Instance = null;
-
     FirebaseAuth auth;
-
     FirebaseDatabase db;
+
+    [SerializeField] private TMP_InputField username;
 
     public delegate void OnLoadedDelegate(DataSnapshot snapshot);
     public FirebaseAuth GetAuth { get { return auth; } }
 
     private void Awake()
     {
-        #region singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-        #endregion
-
         db = FirebaseDatabase.DefaultInstance;
         db.SetPersistenceEnabled(false);
 
@@ -76,6 +65,8 @@ public class FirebaseSignIn : MonoBehaviour
                             PlayerDataManager.Instance.SavePlayerInlog(email, password);
                             GetComponent<Mainmenu>().SignedIn();
                             LoadFromFirebase("users/" + auth.CurrentUser.UserId);
+
+                            LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId,GetComponent<Mainmenu>().SetUsername);
                         }
                     });
                 }
@@ -88,10 +79,9 @@ public class FirebaseSignIn : MonoBehaviour
             {
                 FirebaseUser newUser = task.Result;
                 Debug.LogFormat("User Registered: {0} ({1})",
-                  newUser.DisplayName, newUser.UserId);
+                      newUser.DisplayName, newUser.UserId);
 
                 UserData userData = new UserData();
-                userData.Name = " ";
                 userData.Email = email;
                 userData.Password = password;
                 userData.Wins = 0;
@@ -117,6 +107,27 @@ public class FirebaseSignIn : MonoBehaviour
                     newUser.DisplayName, newUser.UserId);
             }
         });
+    }
+
+    public void SaveUsername(DataSnapshot snapshot)
+    {
+        Debug.Log("hejhej");
+        var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
+
+        UserData userData = new UserData();
+        userData.Name = username.text;
+        userData.Email = loadedUser.Email;
+        userData.Password = loadedUser.Password;
+        userData.Wins = loadedUser.Wins;
+
+        string json = JsonUtility.ToJson(userData);
+        SaveToFirebase(json);
+
+    }
+    public void test(DataSnapshot snapshot)
+    {
+        var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
+        Debug.Log(loadedUser.Name);
     }
 
     private void SaveToFirebase(string data)

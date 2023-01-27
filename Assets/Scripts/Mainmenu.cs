@@ -11,9 +11,13 @@ using System;
 
 public class Mainmenu : MonoBehaviour
 {
+    private FirebaseSignIn firebaseSignIn;
+
     [SerializeField] private TMP_InputField email;
     [SerializeField] private TMP_InputField password;
     [SerializeField] private TMP_InputField username;
+
+    [SerializeField] private Button playButton;
 
     [SerializeField] private GameObject singedIn;
     [SerializeField] private GameObject singedOut;
@@ -21,36 +25,54 @@ public class Mainmenu : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<FirebaseSignIn>().LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
+        firebaseSignIn = GetComponent<FirebaseSignIn>();
+        firebaseSignIn.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
 
         username.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
-
     }
-
-
 
     public void UserLoaded(DataSnapshot snapshot)
     {
-        Debug.Log("hej");
         var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
-        Debug.Log(loadedUser);
-        GetComponent<FirebaseSignIn>().SignInFirebase(loadedUser.Email, loadedUser.Password);
-        username.text = loadedUser.Name;
+        firebaseSignIn.SignInFirebase(loadedUser.Email, loadedUser.Password);
+        SetUsername(snapshot);
+    }
+
+    public void SetUsername(DataSnapshot snapshot)
+    {
+        var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
+        if (loadedUser.Name != " ")
+            username.text = loadedUser.Name;
     }
 
     private void ValueChangeCheck()
     {
-        throw new NotImplementedException();
+        if (string.IsNullOrWhiteSpace(username.text) || username.text.Contains(" "))
+        {
+            playButton.interactable = false;
+            playButton.GetComponent<Image>().color = new Color(0.6f, 0.6f, 0.6f, 0.66f);
+        }
+        else
+        {
+            playButton.interactable = true;
+            playButton.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        }
     }
 
     public void LoadGame()
     {
+        firebaseSignIn.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, firebaseSignIn.SaveUsername);
 
     }
 
     public void OnSignInClick()
     {
-        FirebaseSignIn.Instance.SignInFirebase(email.text, password.text);
+        firebaseSignIn.SignInFirebase(email.text, password.text);
+    }
+
+    public void OnGuestPlayClick()
+    {
+        firebaseSignIn.GuestSignIn();
     }
 
     public void SignedIn()
@@ -59,14 +81,15 @@ public class Mainmenu : MonoBehaviour
         singedIn.SetActive(true);
     }
 
-    public void SignedOut()
+    public void LogoutClick()
     {
+        Debug.Log("hej");
+        firebaseSignIn.GetAuth.SignOut();
         singedIn.SetActive(false);
         singedOut.SetActive(true);
-    }
 
-    public void OnGuestPlayClick()
-    {
-        FirebaseSignIn.Instance.GuestSignIn();
+        email.text = string.Empty;
+        password.text = string.Empty;
+        username.text = string.Empty;
     }
 }
