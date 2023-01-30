@@ -18,9 +18,14 @@ public class Mainmenu : MonoBehaviour
     [SerializeField] private TMP_InputField username;
 
     [SerializeField] private Button playButton;
+    [SerializeField] private Button guestButton;
 
     [SerializeField] private GameObject singedIn;
     [SerializeField] private GameObject singedOut;
+
+    [SerializeField] private Canvas findMatchCanvas;
+
+
 
 
     private void Start()
@@ -59,10 +64,12 @@ public class Mainmenu : MonoBehaviour
         }
     }
 
-    public void LoadGame()
+    public void ShowFindMatch()
     {
         firebaseSignIn.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, firebaseSignIn.SaveUsername);
 
+        gameObject.SetActive(false);
+        findMatchCanvas.gameObject.SetActive(true);
     }
 
     public void OnSignInClick()
@@ -73,12 +80,15 @@ public class Mainmenu : MonoBehaviour
     public void OnGuestPlayClick()
     {
         firebaseSignIn.GuestSignIn();
+        gameObject.SetActive(false);
+        findMatchCanvas.gameObject.SetActive(true);
     }
 
     public void SignedIn()
     {
         singedOut.SetActive(false);
         singedIn.SetActive(true);
+        guestButton.gameObject.SetActive(false);
     }
 
     public void LogoutClick()
@@ -87,6 +97,7 @@ public class Mainmenu : MonoBehaviour
         firebaseSignIn.GetAuth.SignOut();
         singedIn.SetActive(false);
         singedOut.SetActive(true);
+        guestButton.gameObject.SetActive(false);
 
         email.text = string.Empty;
         password.text = string.Empty;
