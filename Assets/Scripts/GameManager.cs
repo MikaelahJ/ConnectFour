@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public bool greenTurn = true;
     public bool ongoingTurn;
 
+    public bool isLocalPlayerTurn = true;
+
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "GameScene")

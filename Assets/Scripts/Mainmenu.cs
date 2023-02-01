@@ -25,13 +25,10 @@ public class Mainmenu : MonoBehaviour
 
     [SerializeField] private Canvas findMatchCanvas;
 
-
-
-
     private void Start()
     {
         firebaseSignIn = GetComponent<FirebaseSignIn>();
-        firebaseSignIn.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
+        FirebaseManager.Instance.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
 
         username.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
@@ -66,10 +63,12 @@ public class Mainmenu : MonoBehaviour
 
     public void ShowFindMatch()
     {
-        firebaseSignIn.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, firebaseSignIn.SaveUsername);
-
-        gameObject.SetActive(false);
+        FirebaseManager.Instance.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, firebaseSignIn.SaveUsername);
         findMatchCanvas.gameObject.SetActive(true);
+        findMatchCanvas.GetComponent<FindMatch>().JoinQueue(FirebaseManager.Instance.GetAuth.CurrentUser.UserId);
+        gameObject.SetActive(false);
+
+
     }
 
     public void OnSignInClick()
@@ -94,7 +93,7 @@ public class Mainmenu : MonoBehaviour
     public void LogoutClick()
     {
         Debug.Log("hej");
-        firebaseSignIn.GetAuth.SignOut();
+        FirebaseManager.Instance.GetAuth.SignOut();
         singedIn.SetActive(false);
         singedOut.SetActive(true);
         guestButton.gameObject.SetActive(false);
