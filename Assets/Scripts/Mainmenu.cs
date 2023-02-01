@@ -28,7 +28,7 @@ public class Mainmenu : MonoBehaviour
     private void Start()
     {
         firebaseSignIn = GetComponent<FirebaseSignIn>();
-        FirebaseManager.Instance.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
+        FirebaseManager.Instance.LoadUserFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
 
         username.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
@@ -37,6 +37,7 @@ public class Mainmenu : MonoBehaviour
     {
         var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
         firebaseSignIn.SignInFirebase(loadedUser.Email, loadedUser.Password);
+        SignedIn();
         SetUsername(snapshot);
     }
 
@@ -63,12 +64,11 @@ public class Mainmenu : MonoBehaviour
 
     public void ShowFindMatch()
     {
-        FirebaseManager.Instance.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, firebaseSignIn.SaveUsername);
+        FirebaseManager.Instance.LoadUserFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, firebaseSignIn.SaveUsername);
         findMatchCanvas.gameObject.SetActive(true);
-        findMatchCanvas.GetComponent<FindMatch>().JoinQueue(FirebaseManager.Instance.GetAuth.CurrentUser.UserId);
+        findMatchCanvas.GetComponent<FindMatch>().playerID = FirebaseManager.Instance.GetAuth.CurrentUser.UserId;
+        findMatchCanvas.GetComponent<FindMatch>().username = username.text;
         gameObject.SetActive(false);
-
-
     }
 
     public void OnSignInClick()
@@ -92,7 +92,6 @@ public class Mainmenu : MonoBehaviour
 
     public void LogoutClick()
     {
-        Debug.Log("hej");
         FirebaseManager.Instance.GetAuth.SignOut();
         singedIn.SetActive(false);
         singedOut.SetActive(true);

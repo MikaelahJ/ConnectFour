@@ -45,19 +45,14 @@ public class FirebaseSignIn : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log("Email Exists, Logging in");
-
                             FirebaseUser newUser = task2.Result;
-                            Debug.LogFormat("User signed in successfully: {0} ({1})",
-                              newUser.DisplayName, newUser.UserId);
-                            //status.text = newUser.Email + "is signed in";
+                            //Debug.LogFormat("User signed in successfully: {0} ({1})",
+                            //  newUser.DisplayName, newUser.UserId);
 
-                            //playButton.interactable = true;
-                            PlayerDataManager.Instance.SavePlayerInlog(email, password);
-                            GetComponent<Mainmenu>().SignedIn();
-                            FirebaseManager.Instance.LoadFromFirebase("users/" + auth.CurrentUser.UserId);
+                            //PlayerDataManager.Instance.SavePlayerInlog(email, password);
+                            FirebaseManager.Instance.LoadUserFromFirebase("users/" + auth.CurrentUser.UserId);
 
-                            FirebaseManager.Instance.LoadFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, GetComponent<Mainmenu>().SetUsername);
+                            FirebaseManager.Instance.LoadUserFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, GetComponent<Mainmenu>().SetUsername);
                         }
                     });
                 }
@@ -77,7 +72,7 @@ public class FirebaseSignIn : MonoBehaviour
                 userData.Wins = 0;
 
                 string json = JsonUtility.ToJson(userData);
-                FirebaseManager.Instance.SaveToFirebase(json);
+                FirebaseManager.Instance.SaveUserToFirebase(json);
             }
         });
     }
@@ -93,8 +88,8 @@ public class FirebaseSignIn : MonoBehaviour
             else
             {
                 FirebaseUser newUser = task.Result;
-                Debug.LogFormat("User signed in successfully: {0} ({1})",
-                    newUser.DisplayName, newUser.UserId);
+                //Debug.LogFormat("User signed in successfully: {0} ({1})",
+                //    newUser.DisplayName, newUser.UserId);
             }
         });
     }
@@ -110,7 +105,7 @@ public class FirebaseSignIn : MonoBehaviour
         userData.Wins = loadedUser.Wins;
 
         string json = JsonUtility.ToJson(userData);
-        FirebaseManager.Instance.SaveToFirebase(json);
+        FirebaseManager.Instance.SaveUserToFirebase(json);
 
     }
 }

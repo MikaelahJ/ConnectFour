@@ -5,17 +5,14 @@ using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Extensions;
-
+using UnityEngine.SceneManagement;
 public class FirebaseManager : MonoBehaviour
 {
-
-
     public FirebaseAuth auth;
     public FirebaseDatabase db;
 
     public delegate void OnLoadedDelegate(DataSnapshot snapshot);
     public FirebaseAuth GetAuth { get { return auth; } }
-
 
     public static FirebaseManager Instance = null;
 
@@ -32,10 +29,10 @@ public class FirebaseManager : MonoBehaviour
             DontDestroyOnLoad(this);
         }
         #endregion
-
+        
         db = FirebaseDatabase.DefaultInstance;
         db.SetPersistenceEnabled(false);
-
+        
         FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
@@ -43,12 +40,13 @@ public class FirebaseManager : MonoBehaviour
 
             auth = FirebaseAuth.DefaultInstance;
         });
+        SceneManager.LoadScene(1);
+
     }
 
-    public void SaveToFirebase(string data)
+    public void SaveUserToFirebase(string data)
     {
         //puts the json data in the "users/userId" part of the database.
-        Debug.Log("Trying to write data...");
         db.RootReference.Child("users").Child(auth.CurrentUser.UserId).SetRawJsonValueAsync(data).ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
@@ -56,12 +54,12 @@ public class FirebaseManager : MonoBehaviour
             else
             {
                 Debug.Log("DataWrite: Complete");
-                LoadFromFirebase("users/" + auth.CurrentUser.UserId);
+                LoadUserFromFirebase("users/" + auth.CurrentUser.UserId);
             }
         });
     }
 
-    public void LoadFromFirebase(string path, OnLoadedDelegate onLoadedDelegate = null)
+    public void LoadUserFromFirebase(string path, OnLoadedDelegate onLoadedDelegate = null)
     {
         db.RootReference.Child("users");
         db.RootReference.Child(path).GetValueAsync().ContinueWithOnMainThread(task =>
@@ -72,6 +70,19 @@ public class FirebaseManager : MonoBehaviour
             DataSnapshot snap = task.Result;
 
             onLoadedDelegate(snap);
+        });
+    }
+
+    public void CreateNewMatch(string data, string gameID)
+    {
+        db.RootReference.Child("games").Child(gameID).SetRawJsonValueAsync(data).ContinueWithOnMainThread(task =>
+        {
+            if (task.Exception != null)
+                Debug.LogWarning(task.Exception);
+            else
+            {
+                Debug.Log("game Created");
+            }
         });
     }
 
