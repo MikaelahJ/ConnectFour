@@ -37,7 +37,7 @@ public class FindMatch : MonoBehaviour
 
         db = FirebaseManager.Instance.db;
 
-        matchmakingRef = db.RootReference.Child("matchmaking");
+     
         Debug.Log(matchmakingRef);
     }
 
@@ -50,7 +50,7 @@ public class FindMatch : MonoBehaviour
     public void JoinQueue(string playerID)
     {
         Debug.Log(playerID);
-        matchmakingRef.Child("matchmaking").Child(playerID).SetValueAsync("placeholder")
+        matchmakingRef.Child(playerID).SetValueAsync("placeholder")
             .ContinueWith(task =>
             {
                 if (task.IsFaulted)
