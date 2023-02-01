@@ -75,14 +75,16 @@ public class FindMatch : MonoBehaviour
     }
 
     private void StartGame(List<string> playersInQueue)
-    {
+    {//if this user = första i listan skapa game
         string gameID = Guid.NewGuid().ToString();
         GameData gameData = new GameData();
         gameData.gameID = gameID;
         gameData.players = new List<PlayerGameInfo>();
 
-        foreach (string playerID in playersInQueue)
+        for (int i = 0; i < 2; i++)
         {
+            if (playersInQueue[0] != FirebaseManager.Instance.GetAuth.CurrentUser.UserId)
+                return;
             RemoveFromQueue(playerID);
             PlayerGameInfo playerGameInfo = new PlayerGameInfo();
             playerGameInfo.username = username;
