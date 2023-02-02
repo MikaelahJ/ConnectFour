@@ -13,8 +13,7 @@ using System.Linq;
 public class GameData
 {
     public string gameID;
-    public List<PlayerGameInfo> players;
-    public int maxPlayers = 2;
+    public Dictionary<string, string> players = new Dictionary<string, string>();
     public string displayName;
     public string playersTurn;
 }
@@ -42,6 +41,7 @@ public class FindMatch : MonoBehaviour
         JoinQueue(playerID);
         db.RootReference.Child("matchmaking").ValueChanged += matchValueChanged;
     }
+
     public void JoinQueue(string playerID)
     {
         db.RootReference.Child("matchmaking/").Child(playerID).SetValueAsync("placeholder")
@@ -63,60 +63,34 @@ public class FindMatch : MonoBehaviour
         if (!gameFound)
         {
             Dictionary<string, object> matchmakingQueue = (Dictionary<string, object>)e.Snapshot.Value;
+
+
             if (matchmakingQueue != null && matchmakingQueue.Count >= 2)
             {
-                List<string> playersInQueue = matchmakingQueue.Keys.ToList();
+                if (playerID == matchmakingQueue.Keys.First())
+                {
+                    List<string> playersInQueue = matchmakingQueue.Keys.ToList();
+                    StartGame(playersInQueue);
+                }
 
                 text.text = "Match Found";
-                StartGame(playersInQueue);
                 gameFound = true;
             }
         }
     }
 
     private void StartGame(List<string> playersInQueue)
-    {//if this user = första i listan skapa game
+    {
         string gameID = Guid.NewGuid().ToString();
         GameData gameData = new GameData();
         gameData.gameID = gameID;
-        gameData.players = new List<PlayerGameInfo>();
 
-        for (int i = 0; i < 2; i++)
+        foreach (string player in playersInQueue)
         {
-            if (playersInQueue[0] != FirebaseManager.Instance.GetAuth.CurrentUser.UserId)
-                return;
-            RemoveFromQueue(playerID);
-            PlayerGameInfo playerGameInfo = new PlayerGameInfo();
-            playerGameInfo.username = username;
-            playerGameInfo.ID = playerID;
-            gameData.players.Add(playerGameInfo);
+            RemoveFromQueue(player);
 
-            db.RootReference.Child("games").Child(playerID).GetValueAsync().ContinueWith(task =>
-            {
-                if (task.Exception != null)
-                {
-                    Debug.Log(task.Exception);
-                }
-                else if (task.IsCompleted)
-                {
-                    DataSnapshot snapshot = task.Result;
-                    if (snapshot.Exists)
-                    {
-                        // PlayerID exists in the "games" node
-                        Debug.Log("hej");
-                        
-                    }
-                    else
-                    {
-                        Debug.Log("hej2");
-
-                        // PlayerID does not exist in the "games" node
-                    }
-                }
-            });
+            gameData.players.Add(player, gameID);
         }
-
-        Debug.Log(gameData.players[0].ID);
 
         string json = JsonUtility.ToJson(gameData);
         FirebaseManager.Instance.CreateNewMatch(json, gameID);

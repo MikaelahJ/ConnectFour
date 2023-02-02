@@ -17,20 +17,13 @@ class UserData
 public class FirebaseSignIn : MonoBehaviour
 {
     FirebaseAuth auth;
-    FirebaseDatabase db;
 
     [SerializeField] private TMP_InputField username;
-
-    private void Start()
-    {
-
-    }
 
     public void SignInFirebase(string email, string password)
     {
         auth = FirebaseManager.Instance.GetAuth;
-        db = FirebaseManager.Instance.db;
-    
+
         auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
@@ -53,6 +46,8 @@ public class FirebaseSignIn : MonoBehaviour
                             FirebaseManager.Instance.LoadUserFromFirebase("users/" + auth.CurrentUser.UserId);
 
                             FirebaseManager.Instance.LoadUserFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, GetComponent<Mainmenu>().SetUsername);
+                            
+                            GetComponent<Mainmenu>().SignedIn();
                         }
                     });
                 }
@@ -73,6 +68,8 @@ public class FirebaseSignIn : MonoBehaviour
 
                 string json = JsonUtility.ToJson(userData);
                 FirebaseManager.Instance.SaveUserToFirebase(json);
+
+                GetComponent<Mainmenu>().SignedIn();
             }
         });
     }

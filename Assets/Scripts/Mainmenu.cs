@@ -37,7 +37,6 @@ public class Mainmenu : MonoBehaviour
     {
         var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
         firebaseSignIn.SignInFirebase(loadedUser.Email, loadedUser.Password);
-        SignedIn();
         SetUsername(snapshot);
     }
 
@@ -95,10 +94,13 @@ public class Mainmenu : MonoBehaviour
         FirebaseManager.Instance.GetAuth.SignOut();
         singedIn.SetActive(false);
         singedOut.SetActive(true);
-        guestButton.gameObject.SetActive(false);
+        guestButton.gameObject.SetActive(true);
+        findMatchCanvas.gameObject.SetActive(false);
+        gameObject.SetActive(true);
 
         email.text = string.Empty;
         password.text = string.Empty;
-        username.text = string.Empty;
+        username.text = "";
+
     }
 }

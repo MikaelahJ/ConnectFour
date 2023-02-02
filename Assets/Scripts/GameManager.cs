@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     public bool isLocalPlayerTurn = true;
 
+    public string winner;
+
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "GameScene")
@@ -75,9 +77,9 @@ public class GameManager : MonoBehaviour
     public void ShowWinner(int green, int purple)
     {
         if (green >= 3)
-            Debug.Log("green wins");
+            winner = "Green";
 
         if (purple >= 3)
-            Debug.Log("purple wins");
+            winner = "Purple";
     }
 }
