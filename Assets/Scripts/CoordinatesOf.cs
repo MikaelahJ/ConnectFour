@@ -33,7 +33,6 @@ public class CoordinatesOf : MonoBehaviour
             {
                 if (checkLines.grid[y, x].Equals(cellNumber))
                 {
-                    Debug.Log("Hej");
                     checkLines.CheckXAxis(y, x);
                 }
             }

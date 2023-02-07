@@ -8,8 +8,12 @@ public class Plupp : MonoBehaviour
     [HideInInspector] public CircleCollider2D col;
     [HideInInspector] public Animator animator;
 
+    public List<float> xPositions = new List<float>();
+    public List<float> yPositions = new List<float>();
+    float timer = 0;
 
-    private bool IsStill;
+
+    public bool IsInCell;
 
     public Vector3 Pos { get { return transform.position; } }
 
@@ -25,9 +29,17 @@ public class Plupp : MonoBehaviour
 
     private void Update()
     {
-        if (!transform.parent.gameObject.CompareTag("Holder"))
+        if (!transform.parent.gameObject.CompareTag("Holder") && !IsInCell)
         {
             transform.up = -rb.velocity;
+
+            timer += Time.deltaTime;
+            if (timer >= 0.3f)
+            {
+                xPositions.Add(transform.position.x);
+                yPositions.Add(transform.position.y);
+                timer = 0;
+            }
         }
     }
 

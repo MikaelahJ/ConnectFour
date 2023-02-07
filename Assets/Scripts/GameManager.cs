@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Firebase.Database;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,27 +12,25 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
+        Instance = this;
+        DontDestroyOnLoad(this);
     }
     #endregion
+    FirebaseDatabase db;
+
 
     private GameObject greenCanon;
     private GameObject purpleCanon;
 
+
     public Camera cam;
 
-    public bool greenTurn = true;
-    public bool ongoingTurn;
+    public Dictionary<string, bool> playerColour = new Dictionary<string, bool>();
 
-    public bool isLocalPlayerTurn = true;
+    public bool greenTurn = true;
+    public bool isLocalPlayerTurn;
+    private bool arePlayersSet;
+    private string playerID;
 
     public string winner;
 
@@ -44,24 +43,49 @@ public class GameManager : MonoBehaviour
             greenCanon = GameObject.Find("GreenCanon");
             purpleCanon = GameObject.Find("PurpleCanon");
 
-            GreenTurn();
+            db = FirebaseManager.Instance.db;
+            playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
+
+            GetTurn();
         }
     }
 
-    public void ChangeTurn()
+    public void GetTurn()
     {
-        if (greenTurn)
+        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+    }
+
+    public void ChangeTurn(DataSnapshot snap)
+    {
+        var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        if (!arePlayersSet)
+        {
+            SetPlayers(loadedGame);
+        }
+
+        if (loadedGame.greenTurn)
+        {
+
+            greenTurn = true;
+            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
+            GreenTurn();
+        }
+        else
         {
             PurpleTurn();
             greenTurn = false;
             cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
         }
-        else
-        {
-            greenTurn = true;
-            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
-            GreenTurn();
-        }
+
+        FirebaseManager.Instance.ChangeTurn(greenTurn);
+    }
+
+    private void SetPlayers(GameData loadedGame)
+    {
+        playerColour.Add(loadedGame.playerOneID, true);
+        playerColour.Add(loadedGame.playerTwoID, false);
+
+        arePlayersSet = true;
     }
 
     private void GreenTurn()
@@ -72,7 +96,7 @@ public class GameManager : MonoBehaviour
     private void PurpleTurn()
     {
         purpleCanon.GetComponent<Cannon>().GetPlupp();
-    }    
+    }
 
     public void ShowWinner(int green, int purple)
     {

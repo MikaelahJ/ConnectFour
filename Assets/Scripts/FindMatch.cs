@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 using Firebase.Auth;
 using Firebase.Database;
@@ -13,15 +13,10 @@ using System.Linq;
 public class GameData
 {
     public string gameID;
-    public Dictionary<string, string> players = new Dictionary<string, string>();
     public string displayName;
-    public string playersTurn;
-}
-
-public class PlayerGameInfo
-{
-    public string username;
-    public string ID;
+    public bool greenTurn;
+    public string playerOneID;
+    public string playerTwoID;
 }
 
 public class FindMatch : MonoBehaviour
@@ -39,7 +34,7 @@ public class FindMatch : MonoBehaviour
         db = FirebaseManager.Instance.db;
 
         JoinQueue(playerID);
-        db.RootReference.Child("matchmaking").ValueChanged += matchValueChanged;
+        db.RootReference.Child("matchmaking").ValueChanged += MatchValueChanged;
     }
 
     public void JoinQueue(string playerID)
@@ -58,15 +53,16 @@ public class FindMatch : MonoBehaviour
             });
     }
 
-    private void matchValueChanged(object sender, ValueChangedEventArgs e)
+    private void MatchValueChanged(object sender, ValueChangedEventArgs e)
     {
+        string firstPlayer = "";
         if (!gameFound)
         {
             Dictionary<string, object> matchmakingQueue = (Dictionary<string, object>)e.Snapshot.Value;
 
-
             if (matchmakingQueue != null && matchmakingQueue.Count >= 2)
             {
+                firstPlayer = matchmakingQueue.Keys.First();
                 if (playerID == matchmakingQueue.Keys.First())
                 {
                     List<string> playersInQueue = matchmakingQueue.Keys.ToList();
@@ -77,37 +73,42 @@ public class FindMatch : MonoBehaviour
                 gameFound = true;
             }
         }
+        if (gameFound)
+        {
+            if (FirebaseManager.Instance.currentGameID == null)
+                FirebaseManager.Instance.LoadGameData("games/" + firstPlayer, LoadCurrentGame);
+            else
+                SceneManager.LoadScene(2);
+        }
     }
 
     private void StartGame(List<string> playersInQueue)
     {
-        string gameID = Guid.NewGuid().ToString();
+        string gameID = playersInQueue[0];
         GameData gameData = new GameData();
         gameData.gameID = gameID;
+        gameData.greenTurn = true;
+
+        int i = 0;
 
         foreach (string player in playersInQueue)
         {
-            RemoveFromQueue(player);
-
-            gameData.players.Add(player, gameID);
+            if (i == 0)
+                gameData.playerOneID = player;
+            if (i == 1)
+                gameData.playerTwoID = player;
+            i++;
         }
 
         string json = JsonUtility.ToJson(gameData);
-        FirebaseManager.Instance.CreateNewMatch(json, gameID);
+        FirebaseManager.Instance.CreateNewMatch(json, gameID, playersInQueue);
     }
 
-    private void RemoveFromQueue(string playerID)
+    private void LoadCurrentGame(DataSnapshot snap)
     {
-        db.RootReference.Child("matchmaking").Child(playerID).RemoveValueAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.Exception != null)
-            {
-                Debug.Log(task.Exception);
-            }
-            else
-            {
-                Debug.Log("removed from queue");
-            }
-        });
+        var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        FirebaseManager.Instance.currentGameID = loadedGame.gameID;
+
+        SceneManager.LoadScene(2);
     }
 }

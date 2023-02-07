@@ -19,13 +19,18 @@ public class Cell : MonoBehaviour
 
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null && isInTrigger)
         {
+            float[] xPos = collision.GetComponent<Plupp>().xPositions.ToArray();
+            float[] yPos = collision.GetComponent<Plupp>().yPositions.ToArray();
+
             BoardGrid gridScript = transform.parent.parent.GetComponent<BoardGrid>();
-            gridScript.SetCellTaken(gameObject, collision.gameObject);
+            gridScript.SetCellTaken(gameObject, collision.gameObject,xPos,yPos);
+
             gameObject.SetActive(false);
             collision.GetComponent<Plupp>().DeactivateRb();
             collision.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center;
+            collision.GetComponent<Plupp>().IsInCell = true;
 
-            GameManager.Instance.ChangeTurn();
+            GameManager.Instance.GetTurn();
         }
     }
 

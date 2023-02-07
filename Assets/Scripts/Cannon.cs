@@ -27,9 +27,14 @@ public class Cannon : MonoBehaviour
 
     void Start()
     {
+        SetPlayerCannon();
         cam = Camera.main;
         animator = GetComponent<Animator>();
         //GetPlupp();
+    }
+
+    private void SetPlayerCannon()
+    {
     }
 
     public void GetPlupp()

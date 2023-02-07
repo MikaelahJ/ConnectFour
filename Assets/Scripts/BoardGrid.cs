@@ -9,7 +9,7 @@ public class BoardGrid : MonoBehaviour
     void Start()
     {
         int i = 0;
-        foreach(BoxCollider2D cell in transform.GetComponentsInChildren<BoxCollider2D>())
+        foreach (BoxCollider2D cell in transform.GetComponentsInChildren<BoxCollider2D>())
         {
             if (cell.gameObject.CompareTag("Cell"))
             {
@@ -19,7 +19,7 @@ public class BoardGrid : MonoBehaviour
         }
     }
 
-    public void SetCellTaken(GameObject cell, GameObject plupp)
+    public void SetCellTaken(GameObject cell, GameObject plupp, float[] xPos, float[] yPos)
     {
         bool color = false;
         if (plupp.CompareTag("Green"))
@@ -29,6 +29,9 @@ public class BoardGrid : MonoBehaviour
         //if color green = true, purple = false
         transform.GetComponent<CheckLines>().takenCell.Add(cells[cell], color);
         transform.GetComponent<CoordinatesOf>().GetCoordinates(cells[cell]);
+
+        Debug.Log(cell);
+        FirebaseManager.Instance.SaveBallPath(xPos, yPos, cells[cell]);
 
         //foreach (KeyValuePair<int, bool> kvp in transform.GetComponent<CheckLines>().takenCell)
         //{
