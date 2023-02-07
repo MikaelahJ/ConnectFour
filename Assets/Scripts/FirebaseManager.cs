@@ -138,7 +138,7 @@ public class FirebaseManager : MonoBehaviour
         playerMove.cell = cellTaken;
         string json = JsonUtility.ToJson(playerMove);
 
-        db.RootReference.Child("games").Child(currentGameID).SetRawJsonValueAsync(json).ContinueWithOnMainThread(task =>
+        db.RootReference.Child("games").Child(currentGameID).Child("ballPath").SetRawJsonValueAsync(json).ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
             {
@@ -151,10 +151,14 @@ public class FirebaseManager : MonoBehaviour
         });
     }
 
-    public void ChangeTurn(bool greenTurn)
+    public void ChangeTurn()
     {
+        if (GameManager.Instance.greenTurn == true)
+            GameManager.Instance.greenTurn = false;
+        else
+            GameManager.Instance.greenTurn = true;
 
-        db.RootReference.Child("games").Child(currentGameID).Child("greenTurn").SetValueAsync(greenTurn).ContinueWithOnMainThread(task =>
+        db.RootReference.Child("games").Child(currentGameID).Child("greenTurn").SetValueAsync(GameManager.Instance.greenTurn).ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
                 Debug.Log(task.Exception);

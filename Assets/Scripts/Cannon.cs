@@ -58,8 +58,6 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
-        if (!GameManager.Instance.isLocalPlayerTurn) return;
-
         if (plupp != null)
         {
             if (Input.GetMouseButtonDown(0))

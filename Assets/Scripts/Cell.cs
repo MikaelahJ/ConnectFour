@@ -30,7 +30,7 @@ public class Cell : MonoBehaviour
             collision.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center;
             collision.GetComponent<Plupp>().IsInCell = true;
 
-            GameManager.Instance.GetTurn();
+            FirebaseManager.Instance.ChangeTurn();
         }
     }
 

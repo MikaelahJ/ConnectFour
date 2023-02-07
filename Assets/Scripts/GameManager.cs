@@ -46,11 +46,17 @@ public class GameManager : MonoBehaviour
             db = FirebaseManager.Instance.db;
             playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
 
-            GetTurn();
+            GetTurnFirst();
+            db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
         }
     }
 
-    public void GetTurn()
+    public void GetTurnFirst()
+    {
+        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+    }
+
+    public void GetTurn(object sender, ValueChangedEventArgs e)
     {
         FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
     }
@@ -65,19 +71,34 @@ public class GameManager : MonoBehaviour
 
         if (loadedGame.greenTurn)
         {
+            Debug.Log("hej");
 
-            greenTurn = true;
-            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
-            GreenTurn();
+            if (playerColour[playerID] == true)
+            {
+                playerColour[playerID] = false;
+                Debug.Log("hej2");
+
+                greenTurn = false;
+                cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
+                GreenTurn();
+            }
         }
         else
         {
-            PurpleTurn();
-            greenTurn = false;
-            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
+            Debug.Log("hej3");
+            if (playerColour[playerID] == true)
+            {
+                playerColour[playerID] = false;
+
+                Debug.Log("hej4");
+
+                PurpleTurn();
+                greenTurn = true;
+                cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
+            }
         }
 
-        FirebaseManager.Instance.ChangeTurn(greenTurn);
+        FirebaseManager.Instance.ChangeTurn();
     }
 
     private void SetPlayers(GameData loadedGame)
