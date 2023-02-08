@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
             //GetTurnFirst();
             db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
 
-            FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetPlayers);
+            //FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetPlayers);
         }
     }
 
@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeTurn(DataSnapshot snap)
     {
+        var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
 
         if (!arePlayersSet)
         {
@@ -111,9 +112,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SetPlayers(DataSnapshot snap)
+    private void SetPlayers(GameData loadedGame)
     {
-        var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        //var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
 
         playerOneID = loadedGame.playerOneID;
         playerTwoID = loadedGame.playerTwoID;
