@@ -18,7 +18,6 @@ public class CheckLines : MonoBehaviour
 
     public void CheckXAxis(int y, int x)
     {
-        Debug.Log("CheckX");
         // -1 cell +1
         cellToCheck = x + 1;
 

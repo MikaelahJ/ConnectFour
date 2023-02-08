@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public Camera cam;
 
     public Dictionary<string, bool> playerColour = new Dictionary<string, bool>();
+    public string playerOneID;
+    public string playerTwoID;
 
     public bool greenTurn = true;
     public bool isLocalPlayerTurn;
@@ -39,46 +41,57 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
             cam = Camera.main;
-
             greenCanon = GameObject.Find("GreenCanon");
             purpleCanon = GameObject.Find("PurpleCanon");
 
             db = FirebaseManager.Instance.db;
             playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
 
-            GetTurnFirst();
+            //GetTurnFirst();
             db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
-        }
-    }
 
-    public void GetTurnFirst()
-    {
-        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+            FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetPlayers);
+        }
     }
 
     public void GetTurn(object sender, ValueChangedEventArgs e)
     {
-        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+        Debug.Log("hejsan1");
+
+        if (e.DatabaseError != null)
+        {
+            Debug.LogError(e.DatabaseError.Message);
+            return;
+        }
+
+        Debug.Log("Value has changed: " + e.Snapshot.GetRawJsonValue());
+
+        Debug.Log("vafan");
+        ChangeTurn(e.Snapshot);
+        //FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+
     }
 
     public void ChangeTurn(DataSnapshot snap)
     {
-        var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+
         if (!arePlayersSet)
         {
             SetPlayers(loadedGame);
         }
-
+        Debug.Log("hejsan2");
+        Debug.Log("greenturn " + loadedGame.greenTurn);
         if (loadedGame.greenTurn)
         {
             Debug.Log("hej");
 
-            if (playerColour[playerID] == true)
+            if (playerOneID == playerID)
             {
-                playerColour[playerID] = false;
+
+
+
                 Debug.Log("hej2");
 
-                greenTurn = false;
                 cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
                 GreenTurn();
             }
@@ -86,25 +99,24 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("hej3");
-            if (playerColour[playerID] == true)
+            if (playerTwoID == playerID)
             {
-                playerColour[playerID] = false;
 
                 Debug.Log("hej4");
 
-                PurpleTurn();
-                greenTurn = true;
+
                 cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
+                PurpleTurn();
             }
         }
-
-        FirebaseManager.Instance.ChangeTurn();
     }
 
-    private void SetPlayers(GameData loadedGame)
+    private void SetPlayers(DataSnapshot snap)
     {
-        playerColour.Add(loadedGame.playerOneID, true);
-        playerColour.Add(loadedGame.playerTwoID, false);
+        var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+
+        playerOneID = loadedGame.playerOneID;
+        playerTwoID = loadedGame.playerTwoID;
 
         arePlayersSet = true;
     }

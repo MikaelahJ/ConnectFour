@@ -125,7 +125,6 @@ public class FirebaseManager : MonoBehaviour
                 Debug.LogWarning(task.Exception);
 
             DataSnapshot snap = task.Result;
-
             onLoadedDelegate(snap);
         });
     }
