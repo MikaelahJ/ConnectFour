@@ -2227,6 +2227,10 @@ PrefabInstance:
       value: Gamemanager
       objectReference: {fileID: 0}
     - target: {fileID: 4143773770170333573, guid: bd3e55e3800bd084597b0c03a45a21f0, type: 3}
+      propertyPath: winCanvas
+      value: 
+      objectReference: {fileID: 1307860940}
+    - target: {fileID: 4143773770170333573, guid: bd3e55e3800bd084597b0c03a45a21f0, type: 3}
       propertyPath: greenCanon
       value: 
       objectReference: {fileID: 3406020215442308964}
