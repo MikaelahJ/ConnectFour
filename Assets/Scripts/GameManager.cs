@@ -47,8 +47,8 @@ public class GameManager : MonoBehaviour
             db = FirebaseManager.Instance.db;
             playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
 
-            db.GetReference("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
-            //db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
+            //db.GetReference("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
+            db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "/greenTurn").ValueChanged += GetTurn;
 
             //FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetPlayers);
         }
@@ -62,8 +62,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Value has changed: " + e.Snapshot.GetRawJsonValue());
-
         Debug.Log("vafan");
         FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
     }
@@ -76,10 +74,9 @@ public class GameManager : MonoBehaviour
         {
             SetPlayers(loadedGame);
         }
-        Debug.Log("greenturn " + loadedGame.greenTurn);
+
         if (loadedGame.greenTurn)
         {
-            Debug.Log("greenturn = true");
             if (playerID == playerOneID)
             {
                 Debug.Log("player 1 turn");
@@ -90,7 +87,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("greenturn = false");
             if (playerID == playerTwoID)
             {
                 Debug.Log("player 2 turn");
@@ -105,8 +101,6 @@ public class GameManager : MonoBehaviour
     {
         playerOneID = loadedGame.playerOneID;
         playerTwoID = loadedGame.playerTwoID;
-
-        Debug.LogFormat("Set Players P1:{0}, P2:{1}", playerOneID, playerTwoID);
 
         arePlayersSet = true;
     }

@@ -29,17 +29,7 @@ public class FirebaseManager : MonoBehaviour
 
     private void Awake()
     {
-        #region singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-        #endregion
+        Instance = this;
 
         db = FirebaseDatabase.DefaultInstance;
         db.SetPersistenceEnabled(false);
@@ -148,17 +138,21 @@ public class FirebaseManager : MonoBehaviour
 
     public void ChangeTurn()
     {
+        Debug.Log(GameManager.Instance.greenTurn);
+
         if (GameManager.Instance.greenTurn == true)
             GameManager.Instance.greenTurn = false;
-        else
+
+        else if (GameManager.Instance.greenTurn == false)
             GameManager.Instance.greenTurn = true;
+
+        Debug.Log(GameManager.Instance.greenTurn);
 
         db.RootReference.Child("games").Child(currentGameID).Child("greenTurn").SetValueAsync(GameManager.Instance.greenTurn).ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
                 Debug.Log(task.Exception);
         });
-
     }
     public void AddPointToUser(string playerID)
     {
@@ -184,7 +178,7 @@ public class FirebaseManager : MonoBehaviour
             });
 
         });
-        
+
     }
 
 }
