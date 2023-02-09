@@ -28,7 +28,8 @@ public class Mainmenu : MonoBehaviour
     private void Start()
     {
         firebaseSignIn = GetComponent<FirebaseSignIn>();
-        FirebaseManager.Instance.LoadUserFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
+        //sätt tillbaka när klar med testing
+        //FirebaseManager.Instance.LoadUserFromFirebase("users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId, UserLoaded);
 
         username.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
     }
@@ -80,6 +81,15 @@ public class Mainmenu : MonoBehaviour
         firebaseSignIn.GuestSignIn();
         gameObject.SetActive(false);
         findMatchCanvas.gameObject.SetActive(true);
+    }
+
+    public void OnTjotjo()
+    {
+        firebaseSignIn.SignInFirebase("tjo@tjo.tjo", "tjotjo");
+    }
+    public void OnHejhej()
+    {
+        firebaseSignIn.SignInFirebase("hej@hej.hej", "hejhej");
     }
 
     public void SignedIn()

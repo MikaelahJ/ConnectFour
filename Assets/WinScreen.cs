@@ -12,7 +12,4 @@ public class WinScreen : MonoBehaviour
     {
         winnerText.text = GameManager.Instance.winner;
     }
-    
-
-    
 }

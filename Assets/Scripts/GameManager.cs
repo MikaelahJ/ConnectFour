@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
     FirebaseDatabase db;
 
 
-    private GameObject greenCanon;
-    private GameObject purpleCanon;
+    [SerializeField] private GameObject greenCanon;
+    [SerializeField] private GameObject purpleCanon;
+
+    [SerializeField] private Canvas winCanvas;
 
 
     public Camera cam;
@@ -41,14 +43,12 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
             cam = Camera.main;
-            greenCanon = GameObject.Find("GreenCanon");
-            purpleCanon = GameObject.Find("PurpleCanon");
 
             db = FirebaseManager.Instance.db;
             playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
 
-            //GetTurnFirst();
-            db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
+            db.GetReference("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
+            //db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
 
             //FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetPlayers);
         }
@@ -56,8 +56,6 @@ public class GameManager : MonoBehaviour
 
     public void GetTurn(object sender, ValueChangedEventArgs e)
     {
-        Debug.Log("hejsan1");
-
         if (e.DatabaseError != null)
         {
             Debug.LogError(e.DatabaseError.Message);
@@ -67,9 +65,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Value has changed: " + e.Snapshot.GetRawJsonValue());
 
         Debug.Log("vafan");
-        ChangeTurn(e.Snapshot);
-        //FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
-
+        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
     }
 
     public void ChangeTurn(DataSnapshot snap)
@@ -80,18 +76,13 @@ public class GameManager : MonoBehaviour
         {
             SetPlayers(loadedGame);
         }
-        Debug.Log("hejsan2");
         Debug.Log("greenturn " + loadedGame.greenTurn);
         if (loadedGame.greenTurn)
         {
-            Debug.Log("hej");
-
-            if (playerOneID == playerID)
+            Debug.Log("greenturn = true");
+            if (playerID == playerOneID)
             {
-
-
-
-                Debug.Log("hej2");
+                Debug.Log("player 1 turn");
 
                 cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
                 GreenTurn();
@@ -99,12 +90,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("hej3");
-            if (playerTwoID == playerID)
+            Debug.Log("greenturn = false");
+            if (playerID == playerTwoID)
             {
-
-                Debug.Log("hej4");
-
+                Debug.Log("player 2 turn");
 
                 cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
                 PurpleTurn();
@@ -114,10 +103,10 @@ public class GameManager : MonoBehaviour
 
     private void SetPlayers(GameData loadedGame)
     {
-        //var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
-
         playerOneID = loadedGame.playerOneID;
         playerTwoID = loadedGame.playerTwoID;
+
+        Debug.LogFormat("Set Players P1:{0}, P2:{1}", playerOneID, playerTwoID);
 
         arePlayersSet = true;
     }
@@ -135,9 +124,16 @@ public class GameManager : MonoBehaviour
     public void ShowWinner(int green, int purple)
     {
         if (green >= 3)
+        {
             winner = "Green";
-
+            //FirebaseManager.Instance.AddPointToUser(playerOneID);
+        }
         if (purple >= 3)
+        {
             winner = "Purple";
+            //FirebaseManager.Instance.AddPointToUser(playerTwoID);
+        }
+
+        winCanvas.gameObject.SetActive(true);
     }
 }

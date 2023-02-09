@@ -143,10 +143,6 @@ public class FirebaseManager : MonoBehaviour
             {
                 Debug.Log(task.Exception);
             }
-            else
-            {
-                Debug.Log("Successfully joined the queue");
-            }
         });
     }
 
@@ -163,6 +159,32 @@ public class FirebaseManager : MonoBehaviour
                 Debug.Log(task.Exception);
         });
 
+    }
+    public void AddPointToUser(string playerID)
+    {
+        db.RootReference.Child("users").Child(playerID).Child("wins").GetValueAsync().ContinueWith(task =>
+        {
+            if (task.Exception != null)
+            {
+                Debug.Log(task.Exception);
+            }
+
+            var user = JsonUtility.FromJson<UserData>(task.Result.GetRawJsonValue());
+
+            int wins = user.Wins + 1;
+            Debug.Log(task.Result);
+            Debug.Log(wins);
+
+            db.RootReference.Child("users").Child(playerID).Child("wins").SetValueAsync(wins).ContinueWithOnMainThread(task2 =>
+            {
+                if (task2.Exception != null)
+                {
+                    Debug.Log(task2.Exception);
+                }
+            });
+
+        });
+        
     }
 
 }

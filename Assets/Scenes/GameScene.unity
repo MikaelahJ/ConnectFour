@@ -2226,6 +2226,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gamemanager
       objectReference: {fileID: 0}
+    - target: {fileID: 4143773770170333573, guid: bd3e55e3800bd084597b0c03a45a21f0, type: 3}
+      propertyPath: greenCanon
+      value: 
+      objectReference: {fileID: 3406020215442308964}
+    - target: {fileID: 4143773770170333573, guid: bd3e55e3800bd084597b0c03a45a21f0, type: 3}
+      propertyPath: purpleCanon
+      value: 
+      objectReference: {fileID: 122607188}
     - target: {fileID: 4143773770170333574, guid: bd3e55e3800bd084597b0c03a45a21f0, type: 3}
       propertyPath: m_RootOrder
       value: 12
