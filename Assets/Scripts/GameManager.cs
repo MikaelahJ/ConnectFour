@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(this);
     }
     #endregion
+
     FirebaseDatabase db;
 
 
@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
 
     public string winner;
 
+    private float timer = 0;
+    private bool timerRunning;
+
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "GameScene")
@@ -56,6 +59,9 @@ public class GameManager : MonoBehaviour
 
     public void GetTurn(object sender, ValueChangedEventArgs e)
     {
+        if (timerRunning) { return; }
+        StartCoroutine(StartTimer());
+
         if (e.DatabaseError != null)
         {
             Debug.LogError(e.DatabaseError.Message);
@@ -70,10 +76,18 @@ public class GameManager : MonoBehaviour
     {
         var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
 
+        if (loadedGame == null)
+        {
+            FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+            return;
+        }
+
         if (!arePlayersSet)
         {
             SetPlayers(loadedGame);
         }
+        Debug.Log(loadedGame.greenTurn);
+        Debug.Log(loadedGame.playerOneID);
 
         if (loadedGame.greenTurn)
         {
@@ -95,6 +109,8 @@ public class GameManager : MonoBehaviour
                 PurpleTurn();
             }
         }
+        Debug.Log(loadedGame.greenTurn);
+
     }
 
     private void SetPlayers(GameData loadedGame)
@@ -129,5 +145,13 @@ public class GameManager : MonoBehaviour
         }
 
         winCanvas.gameObject.SetActive(true);
+    }
+
+
+    private IEnumerator StartTimer()
+    {
+        timerRunning = true;
+        yield return new WaitForSeconds(0.1f);
+        timerRunning = false;
     }
 }

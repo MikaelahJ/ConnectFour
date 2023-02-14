@@ -6,6 +6,8 @@ using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine.SceneManagement;
+using UnityEditor;
+using System;
 
 class PlayerMove
 {
@@ -42,6 +44,7 @@ public class FirebaseManager : MonoBehaviour
             auth = FirebaseAuth.DefaultInstance;
         });
         SceneManager.LoadScene(1);
+
 
     }
 
@@ -140,11 +143,7 @@ public class FirebaseManager : MonoBehaviour
     {
         Debug.Log(GameManager.Instance.greenTurn);
 
-        if (GameManager.Instance.greenTurn == true)
-            GameManager.Instance.greenTurn = false;
-
-        else if (GameManager.Instance.greenTurn == false)
-            GameManager.Instance.greenTurn = true;
+        GameManager.Instance.greenTurn = GameManager.Instance.greenTurn ? false : true;
 
         Debug.Log(GameManager.Instance.greenTurn);
 
@@ -178,8 +177,20 @@ public class FirebaseManager : MonoBehaviour
             });
 
         });
-
     }
-
+    private void OnApplicationQuit()
+    {
+        Debug.Log("hej");
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            db.RootReference.Child("games").Child(currentGameID).RemoveValueAsync();
+            Debug.Log("deletedGame");
+        }
+        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            RemoveFromQueue(GetAuth.CurrentUser.UserId);
+            Debug.Log("removed from queue");
+        }
+    }
 }
 
