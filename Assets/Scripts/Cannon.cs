@@ -26,6 +26,10 @@ public class Cannon : MonoBehaviour
     private bool isDragging;
     private bool isGhostPlupp;
 
+    private float[] xPos, yPos;
+    private int cellToTake;
+    int i = 0;
+
     void Start()
     {
         cam = Camera.main;
@@ -72,9 +76,12 @@ public class Cannon : MonoBehaviour
         }
         if (plupp != null && isGhostPlupp)
         {
-            //plupp.ActivateRb();
-            //Vector3.Lerp()
-            //plupp.PushGhost()
+            plupp.ActivateRb();
+            Vector2 currentPos = new Vector2(xPos[i], yPos[i]);
+            Vector2 nextPos = new Vector2(xPos[i + 1], yPos[i + 1]);
+
+            plupp.PushGhost(Vector3.Lerp(currentPos, nextPos, 0.3f));
+            i++;
         }
 
     }
@@ -111,10 +118,14 @@ public class Cannon : MonoBehaviour
         plupp = null;
     }
 
-    public void ShowGhostPlupp()
+    public void ShowGhostPlupp(float[] _xPos, float[] _yPos, int _cell)
     {
-        //isGhostPlupp = true;
-        //GetPlupp();
+        xPos = _xPos;
+        yPos = _yPos;
+        cellToTake = _cell;
+
+        isGhostPlupp = true;
+        GetPlupp();
 
     }
 }

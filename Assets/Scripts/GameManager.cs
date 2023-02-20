@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
             SetPlayers(loadedGame);
 
         //show other players move
-        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath", ShowOpponentBallPath);
+        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath/", ShowOpponentBallPath);
 
         if (loadedGame.greenTurn)
         {
@@ -106,7 +106,10 @@ public class GameManager : MonoBehaviour
 
     private void ShowOpponentBallPath(DataSnapshot snap)
     {
-        var ballPath = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        var ballPath = JsonUtility.FromJson<PlayerMove>(snap.GetRawJsonValue());
+
+        if (ballPath.xPos == null) return;
+
         if (greenTurn)
         {
             greenCanon.GetComponent<Cannon>().ShowGhostPlupp();

@@ -22,11 +22,11 @@ public class BoardGrid : MonoBehaviour
     public void SetCellTaken(GameObject cell, GameObject plupp, float[] xPos, float[] yPos)
     {
         bool color = false;
-        if (plupp.CompareTag("Green"))
+        if (plupp.CompareTag("Green"))//if color green = true, purple = false
         {
             color = true;
         }
-        //if color green = true, purple = false
+        
         transform.GetComponent<CheckLines>().takenCell.Add(cells[cell], color);
         transform.GetComponent<CoordinatesOf>().GetCoordinates(cells[cell]);
 
