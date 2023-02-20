@@ -75,6 +75,9 @@ public class FindMatch : MonoBehaviour
         }
         if (gameFound)
         {
+            Debug.Log(FirebaseManager.Instance.currentGameID);
+            Debug.Log(firstPlayer);
+
             if (FirebaseManager.Instance.currentGameID == null)
                 FirebaseManager.Instance.LoadGameData("games/" + firstPlayer, LoadCurrentGame);
             else

@@ -26,7 +26,7 @@ public class FirebaseManager : MonoBehaviour
 
     public static FirebaseManager Instance = null;
 
-    public string currentGameID { get; set; }
+    public string currentGameID;
 
 
     private void Awake()
@@ -178,9 +178,10 @@ public class FirebaseManager : MonoBehaviour
 
         });
     }
+
     private void OnApplicationQuit()
     {
-        Debug.Log("hej");
+        Debug.Log("Quit");
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
             db.RootReference.Child("games").Child(currentGameID).RemoveValueAsync();
