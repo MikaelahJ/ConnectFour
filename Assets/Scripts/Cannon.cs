@@ -113,8 +113,8 @@ public class Cannon : MonoBehaviour
 
     public void ShowGhostPlupp()
     {
-        isGhostPlupp = true;
-        GetPlupp();
+        //isGhostPlupp = true;
+        //GetPlupp();
 
     }
 }
