@@ -45,7 +45,10 @@ public class Mainmenu : MonoBehaviour
     {
         var loadedUser = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
         if (loadedUser.Name != " ")
+        {
             username.text = loadedUser.Name;
+            FirebaseManager.Instance.thisUsername = username.text;
+        }
     }
 
     private void ValueChangeCheck()

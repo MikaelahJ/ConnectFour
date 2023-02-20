@@ -55,17 +55,12 @@ public class GameManager : MonoBehaviour
 
     public void GetTurn(object sender, ValueChangedEventArgs e)
     {
-
-        if (timerRunning) { return; }
-        //StartCoroutine(StartTimer());
-
         if (e.DatabaseError != null)
         {
             Debug.LogError(e.DatabaseError.Message);
             return;
         }
 
-        //Debug.Log("vafan");
         FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetTurn);
     }
 
@@ -138,13 +133,5 @@ public class GameManager : MonoBehaviour
         }
 
         winCanvas.gameObject.SetActive(true);
-    }
-
-
-    private IEnumerator StartTimer()
-    {
-        timerRunning = true;
-        yield return new WaitForSeconds(0.05f);
-        timerRunning = false;
     }
 }

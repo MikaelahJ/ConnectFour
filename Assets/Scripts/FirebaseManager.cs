@@ -27,6 +27,8 @@ public class FirebaseManager : MonoBehaviour
     public static FirebaseManager Instance = null;
 
     public string currentGameID = null;
+    public string thisUsername;
+
 
 
     private void Awake()
