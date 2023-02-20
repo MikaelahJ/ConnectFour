@@ -74,14 +74,24 @@ public class Cannon : MonoBehaviour
                 OnDrag();
             }
         }
+
         if (plupp != null && isGhostPlupp)
         {
             plupp.ActivateRb();
-            Vector2 currentPos = new Vector2(xPos[i], yPos[i]);
-            Vector2 nextPos = new Vector2(xPos[i + 1], yPos[i + 1]);
+            Vector3 currentPos = new Vector2(xPos[i], yPos[i]);
+            Vector3 nextPos = new Vector2(xPos[i + 1], yPos[i + 1]);
 
             plupp.PushGhost(Vector3.Lerp(currentPos, nextPos, 0.3f));
-            i++;
+
+            if (plupp.transform.position == nextPos)
+                i++;
+
+            if(i++ > xPos.Length)
+            {
+                plupp.DeactivateRb();
+                isGhostPlupp = false;
+                plupp = null;
+            }
         }
 
     }

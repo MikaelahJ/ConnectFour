@@ -112,6 +112,10 @@ public class GameManager : MonoBehaviour
 
         if (greenTurn)
         {
+            purpleCanon.GetComponent<Cannon>().ShowGhostPlupp(ballPath.xPos, ballPath.yPos, ballPath.cell);
+        }
+        else if (!greenTurn)
+        {
             greenCanon.GetComponent<Cannon>().ShowGhostPlupp(ballPath.xPos, ballPath.yPos, ballPath.cell);
         }
     }

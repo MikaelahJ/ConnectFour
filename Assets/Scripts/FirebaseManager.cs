@@ -114,7 +114,7 @@ public class FirebaseManager : MonoBehaviour
 
     public void LoadGameData(string path, OnLoadedDelegate onLoadedDelegate)
     {
-        db.RootReference.Child(path).GetValueAsync().ContinueWithOnMainThread(task =>
+        db.RootReference.Child(path).GetValueAsync().ContinueWith(task =>
         {
             if (task.Exception != null)
                 Debug.LogWarning(task.Exception);
