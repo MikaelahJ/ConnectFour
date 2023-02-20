@@ -114,6 +114,7 @@ public class GameManager : MonoBehaviour
         {
             if(greenTurn) GreenTurn();
             else PurpleTurn();
+            return;
         }
 
         if (greenTurn)
