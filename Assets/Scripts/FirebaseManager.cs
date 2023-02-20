@@ -95,8 +95,9 @@ public class FirebaseManager : MonoBehaviour
             {
                 RemoveFromQueue(player);
             }
+            Debug.Log("hej3");
 
-            Invoke(nameof(Helvete), 1);
+            Invoke(nameof(Helvete), 0.2f);
         });
 
 
@@ -104,6 +105,7 @@ public class FirebaseManager : MonoBehaviour
 
     private void Helvete()
     {
+        Debug.Log("hej");
         float[] first = new float[1] { 0.0f };
         SaveBallPath(first, first, 0);
     }
@@ -137,6 +139,8 @@ public class FirebaseManager : MonoBehaviour
 
     public void SaveBallPath(float[] xPos, float[] yPos, int cellTaken)
     {
+        Debug.Log("hej2");
+
         PlayerMove playerMove = new PlayerMove();
         playerMove.xPos = xPos;
         playerMove.yPos = yPos;
