@@ -124,6 +124,8 @@ public class FirebaseManager : MonoBehaviour
 
     public void SaveBallPath(float[] xPos, float[] yPos, int cellTaken)
     {
+        Debug.Log(GameManager.Instance.greenTurn);
+
         PlayerMove playerMove = new PlayerMove();
         playerMove.xPos = xPos;
         playerMove.yPos = yPos;

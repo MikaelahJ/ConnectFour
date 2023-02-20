@@ -18,12 +18,10 @@ public class GameManager : MonoBehaviour
 
     FirebaseDatabase db;
 
-
     [SerializeField] private GameObject greenCanon;
     [SerializeField] private GameObject purpleCanon;
 
     [SerializeField] private Canvas winCanvas;
-
 
     public Camera cam;
 
@@ -31,20 +29,21 @@ public class GameManager : MonoBehaviour
     public string playerOneID;
     public string playerTwoID;
 
-    public bool greenTurn = true;
+    public bool greenTurn;
     public bool isLocalPlayerTurn;
     private bool arePlayersSet;
     private string playerID;
 
     public string winner;
 
-    private float timer = 0;
     private bool timerRunning;
 
     private void Start()
     {
         if (SceneManager.GetActiveScene().name == "GameScene")
         {
+            greenTurn = true;
+
             cam = Camera.main;
 
             db = FirebaseManager.Instance.db;
@@ -56,6 +55,8 @@ public class GameManager : MonoBehaviour
 
     public void GetTurn(object sender, ValueChangedEventArgs e)
     {
+        Debug.Log(greenTurn);
+
         if (timerRunning) { return; }
         //StartCoroutine(StartTimer());
 
@@ -66,16 +67,16 @@ public class GameManager : MonoBehaviour
         }
 
         //Debug.Log("vafan");
-        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetTurn);
     }
 
-    public void ChangeTurn(DataSnapshot snap)
+    public void SetTurn(DataSnapshot snap)
     {
         var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
 
         if (loadedGame.gameID == null)
         {
-            FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
+            FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetTurn);
             Debug.Log("No game found");
             return;
         }
@@ -85,6 +86,8 @@ public class GameManager : MonoBehaviour
             SetPlayers(loadedGame);
         }
         Debug.Log(loadedGame.greenTurn);
+        Debug.Log(greenTurn);
+
 
         if (loadedGame.greenTurn)
         {
