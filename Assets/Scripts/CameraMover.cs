@@ -22,7 +22,6 @@ public class CameraMover : MonoBehaviour
     {
         xMin = gridWalls.bounds.min.x;
         xMax = gridWalls.bounds.max.x;
-
     }
 
     void FixedUpdate()

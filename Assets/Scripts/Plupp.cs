@@ -64,4 +64,9 @@ public class Plupp : MonoBehaviour
 
         animator.SetBool("IsStill", true);
     }
+
+    public void PushGhost(Vector3 lerpForce)
+    {
+        rb.AddForce(lerpForce, ForceMode2D.Impulse);
+    }
 }

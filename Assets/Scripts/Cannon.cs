@@ -24,6 +24,7 @@ public class Cannon : MonoBehaviour
     private float distance;
 
     private bool isDragging;
+    private bool isGhostPlupp;
 
     void Start()
     {
@@ -52,7 +53,7 @@ public class Cannon : MonoBehaviour
 
     void Update()
     {
-        if (plupp != null)
+        if (plupp != null && !isGhostPlupp)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -69,6 +70,13 @@ public class Cannon : MonoBehaviour
                 OnDrag();
             }
         }
+        if (plupp != null && isGhostPlupp)
+        {
+            //plupp.ActivateRb();
+            //Vector3.Lerp()
+            //plupp.PushGhost()
+        }
+
     }
 
     void OnDragStart()
@@ -101,6 +109,12 @@ public class Cannon : MonoBehaviour
         trajectory.HideDots();
 
         plupp = null;
-        //Invoke(nameof(GetPlupp), 2);
+    }
+
+    public void ShowGhostPlupp()
+    {
+        isGhostPlupp = true;
+        GetPlupp();
+
     }
 }

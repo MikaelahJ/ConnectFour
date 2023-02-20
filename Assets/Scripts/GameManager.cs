@@ -79,6 +79,9 @@ public class GameManager : MonoBehaviour
         if (!arePlayersSet)
             SetPlayers(loadedGame);
 
+        //show other players move
+        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath", ShowOpponentBallPath);
+
         if (loadedGame.greenTurn)
         {
             if (playerID == playerOneID)
@@ -98,6 +101,15 @@ public class GameManager : MonoBehaviour
                 PurpleTurn();
             }
             cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
+        }
+    }
+
+    private void ShowOpponentBallPath(DataSnapshot snap)
+    {
+        var ballPath = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        if (greenTurn)
+        {
+            greenCanon.GetComponent<Cannon>().ShowGhostPlupp();
         }
     }
 

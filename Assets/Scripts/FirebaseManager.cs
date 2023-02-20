@@ -145,11 +145,7 @@ public class FirebaseManager : MonoBehaviour
 
     public void ChangeTurn()
     {
-        Debug.Log(GameManager.Instance.greenTurn);
-
         GameManager.Instance.greenTurn = !GameManager.Instance.greenTurn;
-
-        Debug.Log(GameManager.Instance.greenTurn);
 
         db.RootReference.Child("games").Child(currentGameID).Child("greenTurn").SetValueAsync(GameManager.Instance.greenTurn).ContinueWithOnMainThread(task =>
         {
@@ -157,6 +153,7 @@ public class FirebaseManager : MonoBehaviour
                 Debug.Log(task.Exception);
         });
     }
+
     public void AddPointToUser(string playerID)
     {
         db.RootReference.Child("users").Child(playerID).Child("wins").GetValueAsync().ContinueWith(task =>
@@ -183,7 +180,7 @@ public class FirebaseManager : MonoBehaviour
         });
     }
 
-    private void OnApplicationQuit()
+    void OnApplicationQuit()
     {
         Debug.Log("Quit");
         if (SceneManager.GetActiveScene().name == "GameScene")
