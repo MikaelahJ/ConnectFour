@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
     public void SetTurn(DataSnapshot snap)
     {
         var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        greenTurn = loadedGame.greenTurn;
 
         if (loadedGame.gameID == null)
         {
