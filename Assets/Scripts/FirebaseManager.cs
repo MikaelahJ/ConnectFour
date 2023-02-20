@@ -89,6 +89,7 @@ public class FirebaseManager : MonoBehaviour
             {
                 Debug.Log("game Created");
                 currentGameID = gameID;
+                SaveBallPath(null, null, 100);
             }
 
             foreach (string player in playersInQueue)

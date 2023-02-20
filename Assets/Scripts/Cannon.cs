@@ -81,6 +81,9 @@ public class Cannon : MonoBehaviour
             Vector3 currentPos = new Vector2(xPos[i], yPos[i]);
             Vector3 nextPos = new Vector2(xPos[i + 1], yPos[i + 1]);
 
+            Debug.Log(currentPos);
+            Debug.Log(nextPos);
+
             plupp.PushGhost(Vector3.Lerp(currentPos, nextPos, 0.3f));
 
             if (plupp.transform.position == nextPos)

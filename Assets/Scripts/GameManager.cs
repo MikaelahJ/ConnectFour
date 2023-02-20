@@ -107,8 +107,9 @@ public class GameManager : MonoBehaviour
     private void ShowOpponentBallPath(DataSnapshot snap)
     {
         var ballPath = JsonUtility.FromJson<PlayerMove>(snap.GetRawJsonValue());
-
-        if (ballPath.xPos == null) return;
+        Debug.Log(ballPath.xPos[1]);
+        Debug.Log(ballPath);
+        if (ballPath == null) return;
 
         if (greenTurn)
         {
