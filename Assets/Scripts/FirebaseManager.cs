@@ -89,7 +89,6 @@ public class FirebaseManager : MonoBehaviour
             {
                 Debug.Log("game Created");
                 currentGameID = gameID;
-                SaveBallPath(null, null, 100);
             }
 
             foreach (string player in playersInQueue)
@@ -97,6 +96,7 @@ public class FirebaseManager : MonoBehaviour
                 RemoveFromQueue(player);
             }
         });
+        SaveBallPath(null, null, 0);
     }
     private void RemoveFromQueue(string playerID)
     {
@@ -115,7 +115,7 @@ public class FirebaseManager : MonoBehaviour
 
     public void LoadGameData(string path, OnLoadedDelegate onLoadedDelegate)
     {
-        db.RootReference.Child(path).GetValueAsync().ContinueWith(task =>
+        db.RootReference.Child(path).GetValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.Exception != null)
                 Debug.LogWarning(task.Exception);
