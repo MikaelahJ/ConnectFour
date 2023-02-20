@@ -50,12 +50,7 @@ public class GameManager : MonoBehaviour
             db = FirebaseManager.Instance.db;
             playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
 
-            //db.GetReference("games/" + FirebaseManager.Instance.currentGameID + "greenTurn").ValueChanged += GetTurn;
-            Debug.Log(FirebaseManager.Instance.currentGameID);
-
             db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "/greenTurn").ValueChanged += GetTurn;
-
-            //FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, SetPlayers);
         }
     }
 
@@ -70,7 +65,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("vafan");
+        //Debug.Log("vafan");
         FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
     }
 
@@ -81,7 +76,7 @@ public class GameManager : MonoBehaviour
         if (loadedGame.gameID == null)
         {
             FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID, ChangeTurn);
-            Debug.Log("hej");
+            Debug.Log("No game found");
             return;
         }
 
@@ -90,7 +85,6 @@ public class GameManager : MonoBehaviour
             SetPlayers(loadedGame);
         }
         Debug.Log(loadedGame.greenTurn);
-        Debug.Log(loadedGame.gameID);
 
         if (loadedGame.greenTurn)
         {
@@ -112,7 +106,6 @@ public class GameManager : MonoBehaviour
                 PurpleTurn();
             }
         }
-        Debug.Log(loadedGame.greenTurn);
     }
 
     private void SetPlayers(GameData loadedGame)

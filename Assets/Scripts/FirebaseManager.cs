@@ -26,7 +26,7 @@ public class FirebaseManager : MonoBehaviour
 
     public static FirebaseManager Instance = null;
 
-    public string currentGameID;
+    public string currentGameID = null;
 
 
     private void Awake()
@@ -143,7 +143,7 @@ public class FirebaseManager : MonoBehaviour
     {
         Debug.Log(GameManager.Instance.greenTurn);
 
-        GameManager.Instance.greenTurn = GameManager.Instance.greenTurn ? false : true;
+        GameManager.Instance.greenTurn = !GameManager.Instance.greenTurn;
 
         Debug.Log(GameManager.Instance.greenTurn);
 

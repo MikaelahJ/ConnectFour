@@ -75,11 +75,8 @@ public class FindMatch : MonoBehaviour
         }
         if (gameFound)
         {
-            Debug.Log(FirebaseManager.Instance.currentGameID);
-            Debug.Log(firstPlayer);
-
-            if (FirebaseManager.Instance.currentGameID == null)
-                FirebaseManager.Instance.LoadGameData("games/" + firstPlayer, LoadCurrentGame);
+            if (FirebaseManager.Instance.currentGameID == null || FirebaseManager.Instance.currentGameID == string.Empty || FirebaseManager.Instance.currentGameID == "")
+                FirebaseManager.Instance.currentGameID = firstPlayer;
             else
                 SceneManager.LoadScene(2);
         }
@@ -110,6 +107,7 @@ public class FindMatch : MonoBehaviour
     private void LoadCurrentGame(DataSnapshot snap)
     {
         var loadedGame = JsonUtility.FromJson<GameData>(snap.GetRawJsonValue());
+        Debug.Log(loadedGame.gameID);
         FirebaseManager.Instance.currentGameID = loadedGame.gameID;
 
         SceneManager.LoadScene(2);
