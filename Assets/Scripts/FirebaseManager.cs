@@ -95,11 +95,19 @@ public class FirebaseManager : MonoBehaviour
             {
                 RemoveFromQueue(player);
             }
-            
-        });float[] first = new float[1] { 0.0f };
-            SaveBallPath(first, first, 0);
-        
+
+            Invoke(nameof(Helvete), 1);
+        });
+
+
     }
+
+    private void Helvete()
+    {
+        float[] first = new float[1] { 0.0f };
+        SaveBallPath(first, first, 0);
+    }
+
     private void RemoveFromQueue(string playerID)
     {
         db.RootReference.Child("matchmaking").Child(playerID).RemoveValueAsync().ContinueWithOnMainThread(task =>
@@ -129,8 +137,6 @@ public class FirebaseManager : MonoBehaviour
 
     public void SaveBallPath(float[] xPos, float[] yPos, int cellTaken)
     {
-        Debug.Log(GameManager.Instance.greenTurn);
-
         PlayerMove playerMove = new PlayerMove();
         playerMove.xPos = xPos;
         playerMove.yPos = yPos;
