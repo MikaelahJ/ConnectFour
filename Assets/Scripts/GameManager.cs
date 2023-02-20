@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
 
     public void GetTurn(object sender, ValueChangedEventArgs e)
     {
-        Debug.Log(greenTurn);
 
         if (timerRunning) { return; }
         //StartCoroutine(StartTimer());
@@ -83,12 +82,7 @@ public class GameManager : MonoBehaviour
         }
 
         if (!arePlayersSet)
-        {
             SetPlayers(loadedGame);
-        }
-        Debug.Log(loadedGame.greenTurn);
-        Debug.Log(greenTurn);
-
 
         if (loadedGame.greenTurn)
         {
@@ -96,9 +90,9 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("player 1 turn");
 
-                cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
                 GreenTurn();
             }
+            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
         }
         else
         {
@@ -106,9 +100,9 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("player 2 turn");
 
-                cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
                 PurpleTurn();
             }
+            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
         }
     }
 
