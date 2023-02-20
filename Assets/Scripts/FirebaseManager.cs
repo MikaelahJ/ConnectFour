@@ -96,7 +96,8 @@ public class FirebaseManager : MonoBehaviour
                 RemoveFromQueue(player);
             }
         });
-        SaveBallPath(null, null, 0);
+        float[] first = new float[] {0,0};
+        SaveBallPath(first, first, 0);
     }
     private void RemoveFromQueue(string playerID)
     {
