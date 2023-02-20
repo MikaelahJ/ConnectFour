@@ -80,36 +80,41 @@ public class GameManager : MonoBehaviour
             SetPlayers(loadedGame);
 
         //show other players move
-        FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath/", ShowOpponentBallPath);
 
         if (loadedGame.greenTurn)
         {
             if (playerID == playerOneID)
             {
-                Debug.Log("player 1 turn");
+                FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath/", ShowOpponentBallPath);
 
-                GreenTurn();
+                Debug.Log("player 1 turn");
             }
-            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
+            //cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
         }
         else
         {
             if (playerID == playerTwoID)
             {
-                Debug.Log("player 2 turn");
+                FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath/", ShowOpponentBallPath);
 
-                PurpleTurn();
+                Debug.Log("player 2 turn");
             }
-            cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
+            //cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
         }
     }
 
     private void ShowOpponentBallPath(DataSnapshot snap)
     {
         var ballPath = JsonUtility.FromJson<PlayerMove>(snap.GetRawJsonValue());
+
         Debug.Log(ballPath.xPos[1]);
         Debug.Log(ballPath);
-        if (ballPath.xPos.Length <= 1) return;
+
+        if (ballPath.xPos.Length <= 1)
+        {
+            if(greenTurn) GreenTurn();
+            else PurpleTurn();
+        }
 
         if (greenTurn)
         {
@@ -129,12 +134,12 @@ public class GameManager : MonoBehaviour
         arePlayersSet = true;
     }
 
-    private void GreenTurn()
+    public void GreenTurn()
     {
         greenCanon.GetComponent<Cannon>().GetPlupp();
     }
 
-    private void PurpleTurn()
+    public void PurpleTurn()
     {
         purpleCanon.GetComponent<Cannon>().GetPlupp();
     }

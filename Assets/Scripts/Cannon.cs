@@ -84,7 +84,7 @@ public class Cannon : MonoBehaviour
             Debug.Log(currentPos);
             Debug.Log(nextPos);
 
-            plupp.PushGhost(Vector3.Lerp(currentPos, nextPos, 0.3f));
+            plupp.PushGhost(Vector3.Lerp(currentPos, nextPos, 10f));
 
             if (plupp.transform.position == nextPos)
                 i++;
@@ -94,6 +94,10 @@ public class Cannon : MonoBehaviour
                 plupp.DeactivateRb();
                 isGhostPlupp = false;
                 plupp = null;
+                cam.gameObject.GetComponent<CameraMover>().isGreenTurn = !GameManager.Instance.greenTurn;
+               
+                if(GameManager.Instance.greenTurn) GameManager.Instance.GreenTurn();
+                else GameManager.Instance.PurpleTurn();
             }
         }
 
