@@ -33,10 +33,9 @@ public class GameManager : MonoBehaviour
     public bool isLocalPlayerTurn;
     private bool arePlayersSet;
     private string playerID;
-
+    private string ballPathPath;
     public string winner;
 
-    private bool timerRunning;
 
     private void Start()
     {
@@ -48,7 +47,7 @@ public class GameManager : MonoBehaviour
 
             db = FirebaseManager.Instance.db;
             playerID = FirebaseManager.Instance.auth.CurrentUser.UserId;
-
+            ballPathPath = "games/" + FirebaseManager.Instance.currentGameID + "/ballPath/";
             db.RootReference.Child("games/" + FirebaseManager.Instance.currentGameID + "/greenTurn").ValueChanged += GetTurn;
         }
     }
@@ -79,13 +78,11 @@ public class GameManager : MonoBehaviour
         if (!arePlayersSet)
             SetPlayers(loadedGame);
 
-        //show other players move
-
         if (loadedGame.greenTurn)
         {
             if (playerID == playerOneID)
             {
-                FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath/", ShowOpponentBallPath);
+                FirebaseManager.Instance.LoadGameData(ballPathPath, ShowOpponentBallPath);
 
                 Debug.Log("player 1 turn");
             }
@@ -95,7 +92,7 @@ public class GameManager : MonoBehaviour
         {
             if (playerID == playerTwoID)
             {
-                FirebaseManager.Instance.LoadGameData("games/" + FirebaseManager.Instance.currentGameID + "/ballPath/", ShowOpponentBallPath);
+                FirebaseManager.Instance.LoadGameData(ballPathPath, ShowOpponentBallPath);
 
                 Debug.Log("player 2 turn");
             }
@@ -107,12 +104,12 @@ public class GameManager : MonoBehaviour
     {
         var ballPath = JsonUtility.FromJson<PlayerMove>(snap.GetRawJsonValue());
 
-        Debug.Log(ballPath.xPos[1]);
-        Debug.Log(ballPath);
+        Debug.Log(ballPath.cell);
 
         if (ballPath.xPos.Length <= 1)
         {
-            if(greenTurn) GreenTurn();
+            Debug.Log("firstTurn");
+            if (greenTurn) GreenTurn();
             else PurpleTurn();
             return;
         }
@@ -137,11 +134,13 @@ public class GameManager : MonoBehaviour
 
     public void GreenTurn()
     {
+        cam.gameObject.GetComponent<CameraMover>().isGreenTurn = true;
         greenCanon.GetComponent<Cannon>().GetPlupp();
     }
 
     public void PurpleTurn()
     {
+        cam.gameObject.GetComponent<CameraMover>().isGreenTurn = false;
         purpleCanon.GetComponent<Cannon>().GetPlupp();
     }
 
@@ -150,12 +149,12 @@ public class GameManager : MonoBehaviour
         if (green >= 3)
         {
             winner = "Green";
-            //FirebaseManager.Instance.AddPointToUser(playerOneID);
+            FirebaseManager.Instance.AddPointToUser(playerOneID);
         }
         if (purple >= 3)
         {
             winner = "Purple";
-            //FirebaseManager.Instance.AddPointToUser(playerTwoID);
+            FirebaseManager.Instance.AddPointToUser(playerTwoID);
         }
 
         winCanvas.gameObject.SetActive(true);

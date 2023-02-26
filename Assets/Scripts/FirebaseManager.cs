@@ -97,17 +97,15 @@ public class FirebaseManager : MonoBehaviour
             }
             Debug.Log("hej3");
 
-            Invoke(nameof(Helvete), 0.2f);
+            Helvete();
         });
-
-
     }
 
-    private void Helvete()
+    public void Helvete()
     {
-        Debug.Log("hej");
-        float[] first = new float[1] { 0.0f };
-        SaveBallPath(first, first, 0);
+        List<float> resetBallPath = new List<float>();
+        resetBallPath.Add(0.0f);
+        SaveBallPath(resetBallPath.ToArray(), resetBallPath.ToArray(), 0);
     }
 
     private void RemoveFromQueue(string playerID)

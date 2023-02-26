@@ -28,7 +28,7 @@ public class Cannon : MonoBehaviour
 
     private float[] xPos, yPos;
     private int cellToTake;
-    int i = 0;
+    int posCounter = 0;
 
     void Start()
     {
@@ -73,33 +73,6 @@ public class Cannon : MonoBehaviour
                 OnDrag();
             }
         }
-
-        if (plupp != null && isGhostPlupp)
-        {
-            plupp.ActivateRb();
-            Vector3 currentPos = new Vector2(xPos[i], yPos[i]);
-            Vector3 nextPos = new Vector2(xPos[i + 1], yPos[i + 1]);
-
-            Debug.Log(currentPos);
-            Debug.Log(nextPos);
-
-            plupp.PushGhost(Vector3.Lerp(currentPos, nextPos, 10f));
-
-            if (plupp.transform.position == nextPos)
-                i++;
-
-            if(i++ > xPos.Length)
-            {
-                plupp.DeactivateRb();
-                isGhostPlupp = false;
-                plupp = null;
-                cam.gameObject.GetComponent<CameraMover>().isGreenTurn = !GameManager.Instance.greenTurn;
-               
-                if(GameManager.Instance.greenTurn) GameManager.Instance.GreenTurn();
-                else GameManager.Instance.PurpleTurn();
-            }
-        }
-
     }
 
     void OnDragStart()
@@ -142,6 +115,55 @@ public class Cannon : MonoBehaviour
 
         isGhostPlupp = true;
         GetPlupp();
+        //StartCoroutine(ShowGhostPath());
+        SetCellTaken();
+    }
 
+    private IEnumerator ShowGhostPath()
+    {
+        plupp.ActivateRb();
+        if (plupp.GetComponent<Rigidbody2D>() == null)
+        {
+            SetCellTaken();
+        }
+        Vector3 fromPos = new Vector2(xPos[posCounter], yPos[posCounter]);
+        Vector3 toPos = new Vector2(xPos[posCounter + 1], yPos[posCounter + 1]);
+        Debug.Log("From " + fromPos);
+        Debug.Log("Next" + toPos);
+
+        float time = 0;
+        while (time < 0.2f)
+        {
+            plupp.PushGhost(Vector3.Lerp(fromPos, toPos, time / 0.2f));
+            time += Time.deltaTime;
+            Debug.Log("Current " + plupp.transform.position);
+            yield return null;
+        }
+
+        plupp.transform.position = toPos;
+        posCounter++;
+
+        if (posCounter + 1 > xPos.Length)
+        {
+            Debug.Log("Path Finished");
+
+        }
+        //else
+            //StartCoroutine(ShowGhostPath());
+    }
+
+    private void SetCellTaken()
+    {
+        plupp.transform.parent = used.transform;
+
+        var cellNum = GameObject.Find("Cell" + cellToTake);
+        cellNum.GetComponent<Cell>().SetPlupp(plupp.gameObject);
+
+        isGhostPlupp = false;
+        plupp = null;
+        cam.gameObject.GetComponent<CameraMover>().isGreenTurn = !GameManager.Instance.greenTurn;
+
+        if (GameManager.Instance.greenTurn) GameManager.Instance.GreenTurn();
+        else GameManager.Instance.PurpleTurn();
     }
 }

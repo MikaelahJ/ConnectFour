@@ -34,7 +34,7 @@ public class Plupp : MonoBehaviour
             transform.up = -rb.velocity;
 
             timer += Time.deltaTime;
-            if (timer >= 0.3f)
+            if (timer >= 0.2f)
             {
                 xPositions.Add(transform.position.x);
                 yPositions.Add(transform.position.y);

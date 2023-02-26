@@ -7,6 +7,7 @@ public class KillZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(collision.gameObject);
+        FirebaseManager.Instance.Helvete();
         FirebaseManager.Instance.ChangeTurn();
     }
 }

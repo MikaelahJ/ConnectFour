@@ -19,17 +19,7 @@ public class Cell : MonoBehaviour
 
         if (collision.gameObject.GetComponent<Rigidbody2D>() != null && isInTrigger)
         {
-            float[] xPos = collision.GetComponent<Plupp>().xPositions.ToArray();
-            float[] yPos = collision.GetComponent<Plupp>().yPositions.ToArray();
-
-            BoardGrid gridScript = transform.parent.parent.GetComponent<BoardGrid>();
-            gridScript.SetCellTaken(gameObject, collision.gameObject,xPos,yPos);
-
-            gameObject.SetActive(false);
-            collision.GetComponent<Plupp>().DeactivateRb();
-            collision.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center;
-            collision.GetComponent<Plupp>().IsInCell = true;
-
+            SetPlupp(collision.gameObject);
             FirebaseManager.Instance.ChangeTurn();
         }
     }
@@ -38,5 +28,19 @@ public class Cell : MonoBehaviour
     {
         isInTrigger = false;
         StopCoroutine(AddPlupp(collision));
+    }
+
+    public void SetPlupp(GameObject plupp)
+    {
+        float[] xPos = plupp.GetComponent<Plupp>().xPositions.ToArray();
+        float[] yPos = plupp.GetComponent<Plupp>().yPositions.ToArray();
+
+        BoardGrid gridScript = transform.parent.parent.GetComponent<BoardGrid>();
+        gridScript.SetCellTaken(gameObject, plupp.gameObject, xPos, yPos);
+
+        gameObject.SetActive(false);
+        plupp.GetComponent<Plupp>().DeactivateRb();
+        plupp.transform.position = gameObject.GetComponent<BoxCollider2D>().bounds.center;
+        plupp.GetComponent<Plupp>().IsInCell = true;
     }
 }
