@@ -148,12 +148,12 @@ public class GameManager : MonoBehaviour
     {
         if (green >= 3)
         {
-            winner = "Green";
+            winner = "Green won!";
             FirebaseManager.Instance.AddPointToUser(playerOneID);
         }
         if (purple >= 3)
         {
-            winner = "Purple";
+            winner = "Purple won!";
             FirebaseManager.Instance.AddPointToUser(playerTwoID);
         }
 
